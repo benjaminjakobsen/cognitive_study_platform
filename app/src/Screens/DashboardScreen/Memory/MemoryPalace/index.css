@@ -13,33 +13,39 @@ h1{
 
 .Text-container{
     overflow: hidden;
+    padding-top : 10vh;
+    padding-bottom : 2vh;
 }
 
-#Create-btn{
+#left-btn{
     overflow: hidden;
     float: left;
     width : 25vw;
     margin-left : 22.5vw;
-    padding-right: 5vw;
-    padding-bottom : 7vh;
-    padding-top : 7vh;
+    padding-bottom : 2vh;
+    padding-top : 2vh;
+    margin-right : 5vw;
+    background-color : lightblue;
+    border-radius: 3vh;
+    text-align: center;
+    cursor :pointer;
 }
 
-#List-btn{
-    overflow: hidden;
-    width : 25vw;
-    padding-top : 7vh;
+#left-btn:hover{
+    box-shadow: 0px 0px 2px 2px black;
 }
 
-#Test-btn{
+#right-btn{
     overflow: hidden;
     width : 25vw;
-    float: left;
-    margin-left : 22.5vw;
-    padding-right: 5vw;
+    padding-top : 2vh;
+    padding-bottom : 2vh;
+    margin-left : 5vw;
+    background-color: lightblue;
+    border-radius : 3vh;
+    cursor :pointer;
 }
 
-#Learn-btn{
-    overflow: hidden;
-    width : 25vw;
+#right-btn:hover{
+    box-shadow: 0px 0px 2px 2px black;
 }

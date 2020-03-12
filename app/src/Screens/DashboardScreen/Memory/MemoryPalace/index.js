@@ -16,7 +16,7 @@ function MemoryPalace(props){
       </div>
 
       <div className = {"Text-container"}>
-        <div id = "Create-btn">
+        <div id = "left-btn">
         <GeneralButton name = "Create a new palace"
           size = "2.5vh" colorOfText = "black"
           onClick={() => {
@@ -24,7 +24,7 @@ function MemoryPalace(props){
             }}/>
         </div>
 
-        <div id = "List-btn">
+        <div id = "right-btn">
         <GeneralButton name = "List of your palaces"
           size = "2.5vh" colorOfText = "black"
           onClick={() => {
@@ -34,7 +34,7 @@ function MemoryPalace(props){
       </div>
 
       <div className = {"Text-container"}>
-        <div id = "Test-btn">
+        <div id = "left-btn">
         <GeneralButton name = "Test yourself in a random palace"
           size = "2.5vh" colorOfText = "black"
           onClick={() => {
@@ -42,7 +42,7 @@ function MemoryPalace(props){
             }}/>
         </div>
 
-        <div id = "Learn-btn">
+        <div id = "right-btn">
           <GeneralButton name = "Learn the Memory Palace Technique"
           size = "2.5vh" colorOfText = "black"
           onClick={() => {

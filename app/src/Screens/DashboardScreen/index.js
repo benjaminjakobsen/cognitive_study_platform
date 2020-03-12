@@ -9,29 +9,28 @@ const history = useHistory();
 
   return (
     <>
-
-    <div>
+    <div className = "memory" >
       <GeneralButton name="Memory"
       onClick= {() => {
         history.push('/dashboard/memory')
       }}
       />
     </div>
-    <div>
+    <div className = "linguistics">
       <GeneralButton name="Linguistics"
       onClick = {() => {
         history.push('/dashboard/linguistics')
       }}
       />
     </div>
-    <div>
+    <div className = "logic">
       <GeneralButton name="Logic"
       onClick = {() => {
         history.push('/dashboard/logic')
       }}
       />
     </div>
-    <div>
+    <div className = "notes">
       <GeneralButton name="Notes"
       onClick = {() => {
         history.push('/dashboard/notes')

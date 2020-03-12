@@ -5,14 +5,22 @@ function GeneralButton(props){
   return (
     <>
     
-    <div style={{
-      fontSize : "1.5rem", 
-      height : "fit-content",
-      width : "fit-content"
+    <div id = {props.color} className={"button"} style={{
+      fontSize : "4.5rem", 
+      height : "auto",
+      width : "auto",
+      textAlign : "center",
+      verticalAlign :"middle",
+      borderRadius : "40px",
+      color : "white",
+      fontFamily : "Times New Roman",
+      WebkitTextStrokeWidth : "0.3px",
+      WebkitTextStrokeColor : "black"
+
     }}
     onClick={()=>{props.onClick()}}
     >
-    <h3>{props.name}</h3>
+      <spam>{props.name}</spam>
     </div>
     </>
   );

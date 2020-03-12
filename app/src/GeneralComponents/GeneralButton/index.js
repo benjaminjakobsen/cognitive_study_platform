@@ -4,9 +4,9 @@ import './index.css';
 function GeneralButton(props){
   return (
     <>
-    
+
     <div style={{
-      fontSize : "1.5rem", 
+      fontSize : "1.5rem",
       height : "fit-content",
       width : "fit-content"
     }}

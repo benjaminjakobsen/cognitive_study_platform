@@ -3,21 +3,19 @@ import './index.css';
 import {useHistory} from 'react-router-dom';
 import GeneralButton from '../../../GeneralComponents/GeneralButton';
 
-function Login(props){
+function CreateAccount(props){
   const history = useHistory();
   return (
     <>
-    <div>
-      <GeneralButton name="Login"
-      onClick= {() => {
-        history.push('/dashboard')
+    <div id="createBtn">
+      <GeneralButton name="Create Account"
+      onClick = {() => {
+        history.push("/dashboard")
       }}
       />
     </div>
-
-
     </>
   );
 }
 
-export default Login;
+export default CreateAccount;

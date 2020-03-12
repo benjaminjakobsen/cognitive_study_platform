@@ -24,6 +24,20 @@ const history = useHistory();
       }}
       />
     </div>
+    <div>
+      <GeneralButton name="Logic"
+      onClick = {() => {
+        history.push('/dashboard/logic')
+      }}
+      />
+    </div>
+    <div>
+      <GeneralButton name="Notes"
+      onClick = {() => {
+        history.push('/dashboard/notes')
+      }}
+      />
+    </div>
 
     </>
   );

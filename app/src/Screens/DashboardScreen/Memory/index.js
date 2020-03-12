@@ -4,7 +4,7 @@ import './index.css';
 function Memory(props){
   return (
     <>
-    <div>HELLO</div>
+    <div>This is the memory screen</div>
     </>
   );
 }

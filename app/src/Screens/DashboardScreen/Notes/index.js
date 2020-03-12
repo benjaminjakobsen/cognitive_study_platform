@@ -1,12 +1,11 @@
 import React from 'react';
 import './index.css';
 
-function Linguistics(props){
+function Notes(props){
   return (
     <>
-    Hello
     </>
   );
 }
 
-export default Linguistics;
+export default Notes;

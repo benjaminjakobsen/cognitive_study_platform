@@ -11,10 +11,10 @@ function Login(props){
       <GeneralButton name="CLICK"
       onClick= {() => {
         history.push('/dashboard')
-      }} 
-      /> 
+      }}
+      />
     </div>
-    
+
 
     </>
   );

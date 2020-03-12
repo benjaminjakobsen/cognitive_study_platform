@@ -16,7 +16,7 @@ function HomeScreen(props){
       <div>
         <Login></Login>
       </div>
-      
+
       <Route exact path={`/dashboard`}/>
     </>
   );

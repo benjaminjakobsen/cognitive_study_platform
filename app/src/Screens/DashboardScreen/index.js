@@ -9,15 +9,22 @@ const history = useHistory();
 
   return (
     <>
-    
+
     <div>
       <GeneralButton name="Memory"
       onClick= {() => {
         history.push('/dashboard/memory')
-      }} 
-      /> 
+      }}
+      />
     </div>
-    
+    <div>
+      <GeneralButton name="Linguistics"
+      onClick = {() => {
+        history.push('/dashboard/linguistics')
+      }}
+      />
+    </div>
+
     </>
   );
 }

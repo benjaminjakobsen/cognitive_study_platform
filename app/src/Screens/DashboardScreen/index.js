@@ -10,28 +10,28 @@ const history = useHistory();
   return (
     <>
     <div className = "memory" >
-      <GeneralButton name="Memory"
+      <GeneralButton name="Memory" size = "3rem"
       onClick= {() => {
         history.push('/dashboard/memory')
       }}
       />
     </div>
     <div className = "linguistics">
-      <GeneralButton name="Linguistics"
+      <GeneralButton name="Linguistics" size = "3rem"
       onClick = {() => {
         history.push('/dashboard/linguistics')
       }}
       />
     </div>
     <div className = "logic">
-      <GeneralButton name="Logic"
+      <GeneralButton name="Logic" size = "3rem"
       onClick = {() => {
         history.push('/dashboard/logic')
       }}
       />
     </div>
     <div className = "notes">
-      <GeneralButton name="Notes"
+      <GeneralButton name="Notes" size = "3rem"
       onClick = {() => {
         history.push('/dashboard/notes')
       }}

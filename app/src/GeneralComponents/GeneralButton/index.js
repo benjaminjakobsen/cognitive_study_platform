@@ -6,7 +6,7 @@ function GeneralButton(props){
     <>
 
     <div className={"button"} style={{
-      fontSize : "2.5rem",
+      fontSize : props.size,
       height : "auto",
       width : "auto",
       textAlign : "center",

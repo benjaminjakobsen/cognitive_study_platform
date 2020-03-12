@@ -8,7 +8,7 @@ function Login(props){
   return (
     <>
     <div>
-      <GeneralButton name="Login"
+      <GeneralButton name="Login" size = "1rem"
       onClick= {() => {
         history.push('/dashboard')
       }}

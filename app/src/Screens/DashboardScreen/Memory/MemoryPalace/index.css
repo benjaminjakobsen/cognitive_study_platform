@@ -1,0 +1,45 @@
+#image{
+    height : 15%;
+    width : 15%;
+    text-align: center;
+    margin-left: 42.5vw;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2vh;
+    font-size: 3vh;
+}
+
+.Text-container{
+    overflow: hidden;
+}
+
+#Create-btn{
+    overflow: hidden;
+    float: left;
+    width : 25vw;
+    margin-left : 22.5vw;
+    padding-right: 5vw;
+    padding-bottom : 7vh;
+    padding-top : 7vh;
+}
+
+#List-btn{
+    overflow: hidden;
+    width : 25vw;
+    padding-top : 7vh;
+}
+
+#Test-btn{
+    overflow: hidden;
+    width : 25vw;
+    float: left;
+    margin-left : 22.5vw;
+    padding-right: 5vw;
+}
+
+#Learn-btn{
+    overflow: hidden;
+    width : 25vw;
+}

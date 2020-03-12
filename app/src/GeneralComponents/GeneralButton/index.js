@@ -4,7 +4,7 @@ import './index.css';
 function GeneralButton(props){
   return (
     <>
-    
+
     <div className={"button"} style={{
       fontSize : props.size,
       height : "auto",

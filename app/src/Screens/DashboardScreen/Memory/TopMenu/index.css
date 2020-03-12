@@ -1,52 +1,8 @@
-#image{
-    height : 15%;
-    width : 15%;
-    text-align: center;
-    margin-left: 42.5%;
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 2%;
-}
-
-.Text-container{
-    overflow: hidden;
-}
-
-#Create-btn{
-    overflow: hidden;
-    float: left;
-    width : 25%;
-    margin-left : 22.5%;
-    padding-right: 5%;
-    padding-bottom : 7%;
-    padding-top : 7%;
-}
-
-#List-btn{
-    overflow: hidden;
-    width : 25%;
-    padding-top : 7%;
-}
-
-#Test-btn{
-    overflow: hidden;
-    width : 25%;
-    float: left;
-    margin-left : 22.5%;
-    padding-right: 5%;
-}
-
-#Learn-btn{
-    overflow: hidden;
-    width : 25%;
-}
 
 .TopMenu-container{
     background-color: lightgrey;
     display : flex;
-    width : 100%;
+    width : 100vw;
     height : 10vh;
     justify-content: space-evenly;
 }
@@ -61,7 +17,7 @@ h1{
     width : fit-content;
     height : auto;
     position: absolute;
-    font-size :2rem;
+    font-size :2vh;
     font-weight: 700;
     text-align: center;
     cursor : pointer;

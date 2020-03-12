@@ -9,24 +9,24 @@ h1 {
   overflow : hidden;
 }
 #Login-container {
-  width : 15.5%;
-  margin-top : 15%;
-  margin-left : 32%;
+  width : 15.5vw;
+  margin-top : 15vh;
+  margin-left : 32vw;
   float : left;
-  padding-right: 5%;
+  padding-right: 5vw;
 }
 #Create-acc-container {
-  width : 15.5%;
-  margin-top : 15%;
+  width : 15.5vw;
+  margin-top : 15vh;
   overflow : hidden;
 }
 #Login-btn {
-  margin-top: -1.5%;
-  margin-left: 36%;
-  width : 5%;
+  margin-top: -1.5vh;
+  margin-left: 36vw;
+  width : 5vw;
 }
 #Create-acc-btn {
-  margin-top: 0.5%;
-  margin-left: 54%;
-  width : 11%;
+  margin-top: 0.5vh;
+  margin-left: 54vw;
+  width : 11vw;
 }

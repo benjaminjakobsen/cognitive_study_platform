@@ -1,3 +1,32 @@
-#createBtn {
-
+h1 {
+  text-align: center;
+  font-size: 25px;
+}
+#Introtext {
+  text-align: center;
+}
+#Container {
+  overflow : hidden;
+}
+#Login-container {
+  width : 15.5%;
+  margin-top : 15%;
+  margin-left : 32%;
+  float : left;
+  padding-right: 5%;
+}
+#Create-acc-container {
+  width : 15.5%;
+  margin-top : 15%;
+  overflow : hidden;
+}
+#Login-btn {
+  margin-top: -1.5%;
+  margin-left: 36%;
+  width : 5%;
+}
+#Create-acc-btn {
+  margin-top: 0.5%;
+  margin-left: 54%;
+  width : 11%;
 }

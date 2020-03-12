@@ -22,6 +22,9 @@ function App() {
           <Route exact path={"/dashboard/memory"}>
             <Memory/>
           </Route>
+          <Route exact path={"/dashboard/memory/*"}>
+            <Memory/>
+          </Route>
           <Route exact path={"/dashboard/linguistics"}>
             <Linguistics/>
           </Route>
@@ -31,6 +34,7 @@ function App() {
           <Route exact path={"/dashboard/notes"}>
             <Notes/>
           </Route>
+          
           <Route path="/*">
               <h1>The URL does not exist</h1>
           </Route>

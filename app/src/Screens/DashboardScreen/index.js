@@ -10,7 +10,7 @@ const history = useHistory();
   return (
     <>
     <div className = "memory" >
-      <GeneralButton name="Memory"
+      <GeneralButton name="Memory" size = "4.5rem"
       onClick= {() => {
         history.push('/dashboard/memory')
       }}

@@ -8,7 +8,7 @@ function CreateAccount(props){
   return (
     <>
     <div id="createBtn">
-      <GeneralButton name="Create Account" size = "1rem"
+      <GeneralButton name="Create Account" size = "3vh"
       onClick = {() => {
         history.push("/dashboard")
       }}

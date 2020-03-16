@@ -10,21 +10,21 @@ function TopMenu(props){
     <div className = {"TopMenu-container"}> 
       <div className = {"TopMenu-centered-item"}
       onClick={() => {
-        history.push(`/dashboard/memory/memory_palace`)
+        history.push(`/interactive/memory/memory_palace`)
       }}>
         Memory palace
       </div>
 
       <div className = {"TopMenu-centered-item"} 
       onClick={() => {
-        history.push(`/dashboard/memory/dual_n_back`)
+        history.push(`/interactive/memory/dual_n_back`)
       }}>
         Dual N-back
       </div>
 
       <div className = {"TopMenu-centered-item"} 
       onClick={() => {
-        history.push(`/dashboard/memory/flashcards`)
+        history.push(`/interactive/memory/flashcards`)
       }}>
         Flashcards
       </div>

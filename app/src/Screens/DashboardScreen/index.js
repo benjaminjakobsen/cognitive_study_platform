@@ -1,9 +1,9 @@
 import React, { Component, useState } from 'react';
 import './index.css';
-import Memory from './Memory';
 import {Route, useHistory} from 'react-router-dom';
 import GeneralButton from '../../GeneralComponents/GeneralButton';
 import background from '../../assets/background.jpg'
+import {withRouter} from 'react-router';
 
 
 
@@ -30,36 +30,38 @@ const history = useHistory();
 
       <div id = "memory" className = "button-class"> 
         <spam onClick= {() => {
-          history.push('/dashboard/memory')
+          history.push({
+            pathname : '/interactive/memory',
+            state : {page : "memory"}
+          })
+          
         }}> Memory
         </spam>
       </div>
 
       <div id = "linguistics" className = "button-class" >
         <spam onClick = {() => {
-          history.push('/dashboard/linguistics')
+          history.push('/interactive/linguistics')
         }}> Linguistics
         </spam>
       </div>
+
       <div id = "logic" className = "button-class">
         <spam onClick = {() => {
-          history.push('/dashboard/logic')
+          history.push('/interactive/logic')
         }}> Logic
         </spam>
       </div>
+
       <div id = "notes" className = "button-class">
         <spam onClick = {() => {
-          history.push('/dashboard/notes')
+          history.push('/interactive/notes')
         }}> Notes
         </spam>
-      </div>
-
-      
+      </div>      
     </div>
-    
-
     </>
   );
 }
 
-export default DashboardScreen;
+export default withRouter(DashboardScreen);

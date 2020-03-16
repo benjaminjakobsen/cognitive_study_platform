@@ -1,7 +1,9 @@
-.button{
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
 
+.button{
 }
 
 .button:hover{
     cursor:pointer;
 }
+

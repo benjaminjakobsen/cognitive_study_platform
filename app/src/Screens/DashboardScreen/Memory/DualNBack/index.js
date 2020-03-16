@@ -4,7 +4,6 @@ import './index.css';
 function DualNBack(props){
   return (
     <>
-
       TEST DUAL
     </>
   );

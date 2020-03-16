@@ -12,11 +12,11 @@ function GeneralButton(props){
       textAlign : "center",
       verticalAlign :"middle",
       borderRadius : "40px",
-      color : props.colorOfText,
-      fontFamily : "Times New Roman",
+      color : props.colorOfText, 
+      fontFamily : props.font,
       WebkitTextStrokeWidth : "0.3px",
-      WebkitTextStrokeColor : "black"
-
+      WebkitTextStrokeColor : "black",
+      backgroundColor : props.background
     }}
     onClick={()=>{props.onClick()}}
     >

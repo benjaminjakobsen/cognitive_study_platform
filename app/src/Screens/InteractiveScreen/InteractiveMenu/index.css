@@ -1,0 +1,59 @@
+#menu {
+  width : 12.5vw;
+  height : 12.5vh;
+  border-radius: 1px;
+  background-color: #F9F8F8;
+}
+.menuBtn {
+  line-height: 6.25vh;
+  width : 6.25vw;
+  height : 6.25vh;
+  overflow: hidden;
+  position : absolute;
+  font-size: 4vh;
+  -webkit-text-stroke: 0.05px black;
+}
+.menuBtn:hover {
+  cursor: pointer;
+}
+#memoMenu {
+  border: 0.2px;
+  border-top : 0;
+  border-left : 0;
+  border-style: solid;
+  text-align: center;
+  color: #3399FF;
+  border-color: black;
+}
+#lingMenu {
+  left : 6.25vw;
+  text-align: center;
+  border: 0.2px;
+  border-top : 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  color: #33FF33;
+  border-color: black;
+}
+#logiMenu {
+  top : 6.25vh;
+  text-align: center;
+  border: 0.2px;
+  border-top : 0;
+  border-left: 0;
+  border-style: solid;
+  border-color: black;
+  color: #FF3333;
+}
+#noteMenu {
+  left : 6.25vw;
+  top : 6.25vh;
+  border : 0.2px;
+  border-style: solid;
+  border-left: 0;
+  border-top: 0;
+  text-align: center;
+  color : #FF9933;
+  border-color: black;
+}

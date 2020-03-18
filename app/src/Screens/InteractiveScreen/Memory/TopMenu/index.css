@@ -2,9 +2,12 @@
 .TopMenu-container{
     background-color: lightgrey;
     display : flex;
-    width : 100vw;
-    height : 10vh;
+    width : 87.5vw;
+    height : 6.25vh;
     justify-content: space-evenly;
+    position: absolute;
+    left : 12.5vw;
+    top : 0vh;
 }
 
 .TopMenu-container > div{
@@ -21,11 +24,10 @@
     font-weight: 700;
     text-align: center;
     cursor : pointer;
-    line-height: 10vh;
-    vertical-align: middle;
-    outline : 1px solid black;
+    line-height: 6.25vh;
+    outline : 0.2px solid black;
 }
 
 .TopMenu-centered-item:hover{
-    box-shadow: 0px 2px 5px 0px black;
+    box-shadow: 0px 2px 2px 0px black;
 }

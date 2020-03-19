@@ -5,8 +5,6 @@ import {Route} from 'react-router-dom';
 import DualNBack from './DualNBack';
 import MemoryPalace from './MemoryPalace';
 import Flashcard from './Flashcard';
-import GeneralButton from '../../../GeneralComponents/GeneralButton'
-
 
 function Memory(props){
     var [header, setHeader] = useState(true);
@@ -26,7 +24,6 @@ function Memory(props){
           setName("upArrow")
           setTopPadding("6.25vh");
         }
-        console.log(render);
       }}>
       <i className={name}> </i>
       </div>

@@ -17,10 +17,7 @@ function TopMenu(props){
 
       <div className = {"TopMenu-centered-item"}
       onClick={() => {
-        history.push( {
-          pathname : '/interactive/memory/dual_n_back',
-          state : "newPage",
-        })
+        history.push('/interactive/memory/dual_n_back')
       }}>
         Dual N-back
       </div>

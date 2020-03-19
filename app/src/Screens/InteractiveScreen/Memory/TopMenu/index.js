@@ -7,7 +7,7 @@ function TopMenu(props){
   const history = useHistory();
   return (
     <>
-    <div className = {"TopMenu-container"}> 
+    <div className = {"TopMenu-container"}>
       <div className = {"TopMenu-centered-item"}
       onClick={() => {
         history.push(`/interactive/memory/memory_palace`)
@@ -15,14 +15,17 @@ function TopMenu(props){
         Memory palace
       </div>
 
-      <div className = {"TopMenu-centered-item"} 
+      <div className = {"TopMenu-centered-item"}
       onClick={() => {
-        history.push(`/interactive/memory/dual_n_back`)
+        history.push( {
+          pathname : '/interactive/memory/dual_n_back',
+          state : "newPage",
+        })
       }}>
         Dual N-back
       </div>
 
-      <div className = {"TopMenu-centered-item"} 
+      <div className = {"TopMenu-centered-item"}
       onClick={() => {
         history.push(`/interactive/memory/flashcards`)
       }}>

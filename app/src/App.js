@@ -20,10 +20,10 @@ function App() {
         <Route exact path={"/dashboard"}>
           <DashboardScreen/>
         </Route>
-        <Route exact path={"/interactive"}>
+        <Route path={"/interactive"}>
           <InteractiveScreen/>
         </Route>
-        <Route exact path={"/interactive/*"}>
+        <Route path={"/interactive/*"}>
           <InteractiveScreen/>
         </Route>
         <Route exact path={"/interactive/memory"}>

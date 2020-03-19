@@ -11,21 +11,24 @@ import GeneralButton from '../../../GeneralComponents/GeneralButton'
 function Memory(props){
     var [header, setHeader] = useState(true);
     var [render, setRender] = useState(true);
-    var [name, setName] = useState("^");
+    var [name, setName] = useState("upArrow");
+    var [topPadding, setTopPadding] = useState("6.25vh");
     return(
       <>
-      <div id = "topBtn" >
-        <GeneralButton name = {name} size = "4vh" onClick = {() => {
-          if(render) {
-            setRender(false);
-            setName("˅")
-          }
-          else {
-            setRender(true);
-            setName("^")
-          }
-          console.log(render);
-        }}/>
+      <div id = "topBtn" style = {{top : topPadding}} onClick = {() => {
+        if(render) {
+          setRender(false);
+          setName("downArrow")
+          setTopPadding("0vh");
+        }
+        else {
+          setRender(true);
+          setName("upArrow")
+          setTopPadding("6.25vh");
+        }
+        console.log(render);
+      }}>
+      <i className={name}> </i>
       </div>
 
       {render ? [

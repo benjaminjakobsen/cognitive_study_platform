@@ -1,10 +1,13 @@
 import React from 'react';
 import './index.css';
+import TopMenu from '../TopMenu'
 
 function DualNBack(props){
   return (
     <>
-      TEST DUAL
+    <div>
+
+    </div>
     </>
   );
 }

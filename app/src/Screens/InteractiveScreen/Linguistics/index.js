@@ -4,7 +4,6 @@ import './index.css';
 function Linguistics(props){
   return (
     <>
-    Hello
     </>
   );
 }

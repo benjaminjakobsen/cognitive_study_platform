@@ -11,17 +11,16 @@ import {useHistory} from 'react-router-dom';
 function InteractiveScreen(props){
   let history = useHistory();
   var [renderTop, setRenderTop] = useState(true);
-  var [page, setPage] = useState("/interactive/linguistics");
-  console.log(page);
-
+  var [page, setPage] = useState("");
+  console.log(history.location.state);
   if(history.location.state == "newPage") {
     history.location.state = "";
-    console.log(history.location.pathname);
     setPage(history.location.pathname);
+    console.log(history.location.pathname)
   }
   if(page == "/interactive/memory")
     return ( <>
-      <InteractiveMenu/>
+      <InteractiveMenu/>/interactive
       <Memory/>
     </>
     );

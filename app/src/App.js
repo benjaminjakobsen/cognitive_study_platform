@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomeScreen from './Screens/HomeScreen';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import DashboardScreen from './Screens/DashboardScreen';
 import InteractiveScreen from './Screens/InteractiveScreen';

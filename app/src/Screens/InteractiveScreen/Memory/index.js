@@ -7,7 +7,6 @@ import MemoryPalace from './MemoryPalace';
 import Flashcard from './Flashcard';
 
 function Memory(props){
-    var [header, setHeader] = useState(true);
     var [render, setRender] = useState(true);
     var [name, setName] = useState("upArrow");
     var [topPadding, setTopPadding] = useState("6.25vh");
@@ -29,18 +28,19 @@ function Memory(props){
       </div>
 
       {render ? [
-        <div onClick={()=> setHeader(false)}>
+        <div>
           <TopMenu />
         </div>
       ] : null}
 
-      {header ? [
-      <div id = "Header-container">
-        <h1>Welcome to the memory page</h1>
-      </div>,
-      <div>
-        <h2>Choose category above to get started!</h2>
-      </div>] : null}
+      <Route exact path = {'/interactive/memory'}>
+        <div id = "Header-container">
+          <h1>Welcome to the memory page</h1>
+        </div>,
+        <div>
+          <h2>Choose category above to get started!</h2>
+        </div>
+      </Route>
 
       <Route exact path = {`/interactive/memory/flashcards`}>
         <Flashcard/>

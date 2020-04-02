@@ -1,9 +1,11 @@
-h2{
+.memory-header{
     text-align: center;
+    font-size: 3rem;
 }
 
 #Header-container{
-    padding-top : 5vh;
+    position: relative;
+    top : 12.5vh;
 }
 #topBtn {
   width : 2.5vw;
@@ -32,7 +34,7 @@ i {
   padding: 0.5vh;
   color: black;
   border: solid black;
-  border-width: 0 0.3vh 0.3vh 0;
+  border-width: 0 0.08rem 0.08rem 0;
   display: inline-block;
   margin-left: 0.875vw;
 }

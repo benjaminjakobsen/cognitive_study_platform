@@ -4,15 +4,18 @@
     text-align: center;
     margin-left: 42.5vw;
 }
-
-h1{
+.memory-container {
+  position: relative;
+  top : 12.5vh;
+}
+.welcome-text{
     text-align: center;
     margin-bottom: 2vh;
-    font-size: 3vh;
-    padding-top : 3vh
+    font-size: 2.5rem;
 }
 
 .Text-container{
+    position: relative;
     overflow: hidden;
     padding-top : 10vh;
     padding-bottom : 2vh;

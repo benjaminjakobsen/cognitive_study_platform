@@ -35,10 +35,12 @@ function Memory(props){
 
       <Route exact path = {'/interactive/memory'}>
         <div id = "Header-container">
-          <h1>Welcome to the memory page</h1>
-        </div>,
-        <div>
-          <h2>Choose category above to get started!</h2>
+          <div className = "memory-header">
+            Welcome to the memory page
+          </div>,
+          <div className = "memory-header">
+            <h2>Choose category above to get started!</h2>
+          </div>
         </div>
       </Route>
 

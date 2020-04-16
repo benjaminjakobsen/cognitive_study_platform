@@ -48,7 +48,8 @@ function Memory(props){
       </Route>
       <Route exact path = {`/interactive/memory/dual_n_back`}>
         <DualNBack/>
-      </Route>
+      </Route>      
+      
     </>
   )
 }

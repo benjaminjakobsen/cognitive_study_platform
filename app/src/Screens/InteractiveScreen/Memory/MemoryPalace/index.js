@@ -2,7 +2,8 @@ import React from 'react';
 import './index.css';
 import palace from '../../../../assets/palace.png'
 import GeneralButton from '../../../../GeneralComponents/GeneralButton';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Route} from 'react-router-dom';
+import Learn from './Learn';
 
 function MemoryPalace(props){
   const history = useHistory();
@@ -49,12 +50,16 @@ function MemoryPalace(props){
             onClick={() => {
               history.push(`./memory_palace/learn`)
               }}/>
-          </div>
+          </div>          
         </div>
       </div>
 
+      <Route exact path = {'/interactive/memory/memory_palace/learn'}>
+        <Learn/>
+      </Route>
+
     </>
-  );
+  )
 }
 
 export default MemoryPalace;

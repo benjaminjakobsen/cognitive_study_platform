@@ -1,21 +1,17 @@
 import React from 'react';
 import './index.css';
-import {useHistory} from 'react-router-dom';
-import GeneralButton from '../../../GeneralComponents/GeneralButton';
 
 function Login(props){
-  const history = useHistory();
   return (
     <>
-    <div>
-      <GeneralButton name="Login" size = "3vh"
-      onClick= {() => {
-        history.push('/dashboard')
-      }}
-      />
+    <div className = "login-header">Login</div>
+    <div className = "info-container">
+      <div className = "input">
+      </div>
+      <div className = "input">
+
+      </div>
     </div>
-
-
     </>
   );
 }

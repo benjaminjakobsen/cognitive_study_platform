@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-import palace from '../../../../assets/palace.png'
 import {useHistory} from 'react-router-dom';
 
 function TopMenu(props){

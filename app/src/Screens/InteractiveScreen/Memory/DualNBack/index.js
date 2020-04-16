@@ -123,8 +123,8 @@ class DualNBack extends Component {
         </div>
         <div className = "score-holder">
           <div className = "score-title"> Score </div>
-          <div className = "score-correct"> Correct: {this.score[0]} : {this.score[0]/20 * 100}% </div>
-          <div className = "score-incorrect"> Incorrect: {this.score[1]} : {this.score[1]/20 * 100}% </div>
+          <div className = "score-correct"> Correct: {this.score[0]} : {Math.round(this.score[0]/(this.score[0] + this.score[1]) * 100)}% </div>
+          <div className = "score-incorrect"> Incorrect: {this.score[1]} : {Math.round((this.score[1]/(this.score[0] + this.score[1])) * 100)}% </div>
         </div>
       </div>
     );

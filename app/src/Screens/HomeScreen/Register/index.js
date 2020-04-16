@@ -1,28 +1,32 @@
 import React from 'react';
 import './index.css';
+import {Form, Button} from 'react-bootstrap'
 
 function Register(props){
   return (
     <>
-    <div className = "login-header">Register</div>
-    <form>
-      <div className = "form-group">
-        <label for = "email"> Email </label>
-        <input type = "text" name = "email" placeholder = "email"/>
-      </div>
-      <div className = "form-group">
-        <label for = "username"> Username </label>
-        <input type = "text" name = "username" placeholder = "username"/>
-      </div>
-      <div className = "form-group">
-        <label for = "password"> Password </label>
-        <input type = "password" name = "password" placeholder = "password"/>
-      </div>
-    </form>
-    <div className = "">
-      <button type="button" class="login">
+    <div className = "register-container">
+      <Form>
+        <Form.Group className = "group">
+          <Form.Label> Username </Form.Label>
+          <Form.Control type="text"/>
+        </Form.Group>
+        <Form.Group className = "group">
+          <Form.Label> Email </Form.Label>
+          <Form.Control type="email"/>
+        </Form.Group>
+        <Form.Group className = "group">
+          <Form.Label> Password </Form.Label>
+          <Form.Control type="password"/>
+        </Form.Group>
+        <Form.Group className = "group">
+          <Form.Label> Confirm Password </Form.Label>
+          <Form.Control type="password"/>
+        </Form.Group>
+        <Button variant ="secondary">
         Create Account
-      </button>
+        </Button>
+      </Form>
     </div>
     </>
   );

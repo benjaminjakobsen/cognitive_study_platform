@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import HomeScreen from './Screens/HomeScreen';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import DashboardScreen from './Screens/DashboardScreen';

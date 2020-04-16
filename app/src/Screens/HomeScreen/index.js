@@ -9,8 +9,15 @@ import Register from './Register'
 function HomeScreen(props){
   return (
     <>
-    <div className = "info">
-      <SignIn/>
+    <div className = "main-container">
+      <div className = "sign-in">
+        <div className="header"> Sign In</div>
+        <SignIn/>
+      </div>
+      <div className = "register">
+        <div className="header">Register</div>
+        <Register/>
+      </div>
     </div>
     </>
   );

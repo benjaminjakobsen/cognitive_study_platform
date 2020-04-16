@@ -1,11 +1,6 @@
-.login-header {
-  font-size: 40px;
-  font-family: "o";
+.group {
+  width : 15vw;
 }
-
-.info-container  {
-
-}
-.login {
-  background-color: pink;
+.login-container{
+  width : 15vw;
 }

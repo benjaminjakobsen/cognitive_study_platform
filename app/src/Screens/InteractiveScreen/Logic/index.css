@@ -1,0 +1,9 @@
+.logic-header{
+    text-align: center;
+    font-size: 2vw;
+}
+
+#Header-container{
+    position: relative;
+    top : 12.5vh;
+}

@@ -4,7 +4,6 @@ import TopMenu from './TopMenu';
 import {Route} from 'react-router-dom';
 import DualNBack from './DualNBack';
 import MemoryPalace from './MemoryPalace';
-import Flashcard from './Flashcard';
 
 function Memory(props){
     var [render, setRender] = useState(true);
@@ -44,9 +43,6 @@ function Memory(props){
         </div>
       </Route>
 
-      <Route exact path = {`/interactive/memory/flashcards`}>
-        <Flashcard/>
-      </Route>
       <Route exact path = {`/interactive/memory/memory_palace`}>
         <MemoryPalace/>
       </Route>

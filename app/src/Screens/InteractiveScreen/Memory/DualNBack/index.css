@@ -8,9 +8,10 @@
   position: absolute;
   width : 15vw;
   height : 16vh;
-  left : 75vw;
+  left : 73vw;
   top : 27vh;
   background-color: lightgrey;
+  font-size: 1vw;
 }
 .game-container{
     background-color: ivory;
@@ -49,9 +50,6 @@
     opacity: 40%;
     cursor: pointer;
 }
-.restart-btn {
-
-}
 
 .start-btn-text{
     text-align: center;
@@ -76,19 +74,19 @@
   position: relative;
   width: 15vw;
   height : 5vh;
-  padding-left: 0.5vw;
+  padding-left: 0.75vw;
 }
 .score-incorrect {
   position: relative;
   width: 15vw;
   height : 5vh;
-  padding-left: 0.5vw;
+  padding-left: 0.75vw;
 }
 
 #dropdown-class{
     width : 12vw;
     height: 4vh;
-    font-size: 1.5rem;
+    font-size: 1vw;
     font-weight: 600;
 }
 
@@ -101,32 +99,18 @@
     font-weight: 500;
     text-align: center;
     position : absolute;
-    width : 12vw;
+    width : 27vw;
     height : 4vh;
     border : 0.15vh black;
     border-style : solid;
     line-height: 3.5vh;
     cursor : pointer;
+    left : 36.5vw;
+    top : 78vh;
+    background-color: rgb(192, 255, 192);
 }
 
 .dual-button-class:active{
     box-shadow: 0px 0px 2px 1px black;
 }
 
-#audio-container{
-    left : 36.5vw;
-    top : 78vh;
-    background-color : rgb(180, 241, 251)
-}
-
-#position-container{
-    left : 51.5vw;
-    top : 78vh;
-    background-color: rgb(192, 255, 192);
-}
-
-.background{
-    background: rgb(250, 250, 250);
-    width : 100vw;
-    height : 100vh;
-}

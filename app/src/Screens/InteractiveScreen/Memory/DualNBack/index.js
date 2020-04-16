@@ -36,12 +36,12 @@ class DualNBack extends Component {
         document.getElementById(pos).style.backgroundColor = "rgb(255, 195, 11)";
         this.order[0].unshift(pos);
         this.rounds -= 1;
-        setTimeout(() => this.checkPos(), 950);
-        setTimeout(() => this.game(), 1000);}, 200);
+        setTimeout(() => this.checkPos(), 1950);
+        setTimeout(() => this.game(), 2000);}, 200);
     }
     else{
       this.order[0] = [];
-      this.rounds = 5;
+      this.rounds = 20;
       this.overStart = false;
       this.setState({start : true});
     }
@@ -66,7 +66,6 @@ class DualNBack extends Component {
   }
 
   render() {
-    //[gameRunning, setGameRunning] = useState(true);
     return (
       <div className = "background">
         <div className = "dropdown-container">
@@ -109,19 +108,14 @@ class DualNBack extends Component {
           </div>
         </div>
 
-        <div className = "dual-button-class" id = "audio-container"
-        onClick = {() => {this.setAudio(true);}}>
-          Audio
-        </div>
-
-        <div className = "dual-button-class" id = "position-container"
+        <div className = "dual-button-class" 
         onClick = {() => {this.setPosition(true)}}>
           Position
         </div>
         <div className = "score-holder">
           <div className = "score-title"> Score </div>
-          <div className = "score-correct"> Correct: N/A : N/A% </div>
-          <div className = "score-incorrect"> Incorrect: N/A : N/A% </div>
+          <div className = "score-correct"> Correct: {this.score[0]} : {this.score[0]/20 * 100}% </div>
+          <div className = "score-incorrect"> Incorrect: {this.score[1]} : {this.score[1]/20 * 100}% </div>
         </div>
       </div>
     );

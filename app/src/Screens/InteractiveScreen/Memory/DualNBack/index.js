@@ -36,8 +36,8 @@ class DualNBack extends Component {
         document.getElementById(pos).style.backgroundColor = "rgb(255, 195, 11)";
         this.order[0].unshift(pos);
         this.rounds -= 1;
-        setTimeout(() => this.checkPos(), 1950);
-        setTimeout(() => this.game(), 2000);}, 200);
+        setTimeout(() => this.checkPos(), 950);
+        setTimeout(() => this.game(), 1000);}, 1000);
     }
     else{
       this.order[0] = [];
@@ -68,6 +68,15 @@ class DualNBack extends Component {
   render() {
     return (
       <div className = "background">
+        <div className = "info-container">
+          <div className = "info-header">Rules of N-back</div>
+          <div className = "info-text-explaination">N-back is a minigame where the goal is to keep track of the N latest elements. </div>
+          <div className = "info-text">1) Choose your N from the dropdown above the game field</div>
+          <div className = "info-text">2) Click start on the game field</div>
+          <div className = "info-text">3) Whenever the position of the yellow marker is the same as it was N times ago, click the position button below the game field.</div> 
+          
+        </div>
+
         <div className = "dropdown-container">
           <Dropdown>
             <Dropdown.Toggle id="dropdown-class" variant="warning">

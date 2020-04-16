@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-import palace from '../../../../assets/palace.png'
 import {useHistory} from 'react-router-dom';
 
 function TopMenu(props){
@@ -10,16 +9,16 @@ function TopMenu(props){
     <div className = {"TopMenu-container"}>
       <div className = {"TopMenu-centered-item"}
       onClick={() => {
-        history.push(`/interactive/memory/memory_palace`)
+        history.push(`/interactive/notes/notepad`)
       }}>
-        Memory palace
+        Notepad
       </div>
 
       <div className = {"TopMenu-centered-item"}
       onClick={() => {
-        history.push('/interactive/memory/dual_n_back')
+        history.push('/interactive/notes/note_organizing')
       }}>
-        N-back
+        Note organizing
       </div>
     </div>
     </>

@@ -1,7 +1,24 @@
 {
-  "dependencies": {
-    "@popperjs/core": "^2.1.1",
-    "bootstrap": "^4.4.1",
-    "react-bootstrap": "^1.0.0-beta.17"
+  "name": "cognitive_study_platform",
+  "version": "1.0.0",
+  "description": "Cognitive study platform through MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PointingMan/cognitive_study_platform.git"
+  },
+  "author": "Benjamin Jakobsen & Louie Ray Eistrup Juhl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PointingMan/cognitive_study_platform/issues"
+  },
+  "homepage": "https://github.com/PointingMan/cognitive_study_platform#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }

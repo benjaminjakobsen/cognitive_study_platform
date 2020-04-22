@@ -1,0 +1,12 @@
+.group {
+  color : #FCF6F5FF;
+  width : 15vw;
+  padding-bottom: 2vh;
+}
+.login-container{
+  width : 15vw;
+}
+.login-btn {
+  margin-left: 5vw;
+  width : 5vw;
+}

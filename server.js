@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const items = require('./routes/api/items');
+const users = require('./routes/api/users');
 
 const app = express(); //Run new express server
 
@@ -14,7 +14,7 @@ mongoose //Piece of middleware
   .then(() => console.log('MongoDB Connected...')) //If succesful then console log
   .catch(err => console.log(err)); //Catch error if not successful
 
-app.use('/api/items', items) //Tells that you can send requests to /api/items and then use router from items file
+app.use('/api/users', users) //Tells that you can send requests to /api/items and then use router from items file
 
 const port = 4000; //Use port 4000
 

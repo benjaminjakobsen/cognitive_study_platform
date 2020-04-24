@@ -3,6 +3,7 @@ import './index.css';
 import {Form, Button} from 'react-bootstrap'
 import axios from 'axios';
 
+
 function Register(props){
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
@@ -32,7 +33,7 @@ function Register(props){
           alert("Passwords must match");
         }
         else{
-          axios.post('/api/users', {
+          axios.post('/api/users/register', {
             "username" : usernameRef.current.value,
             "password" : passwordRef.current.value,
             "email" : emailRef.current.value

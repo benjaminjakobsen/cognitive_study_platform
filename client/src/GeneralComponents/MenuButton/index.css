@@ -1,0 +1,7 @@
+.menuButton{
+    position : absolute;
+}
+
+.menuButton:hover{
+    cursor: pointer;
+}

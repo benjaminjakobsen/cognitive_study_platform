@@ -1,3 +1,9 @@
+.background-image{
+  width: 100%;
+  height : 100%;
+  position : absolute;
+}
+
 #menu {
   position: fixed;
   top : 0;
@@ -6,6 +12,7 @@
   height : 12.5vh;
   border-radius: 1px;
   background-color: #F9F8F8;
+  box-shadow: 0px 0px 10px 6px grey;
 }
 .menuBtn {
   line-height: 6.25vh;
@@ -25,9 +32,16 @@
   border-left : 0;
   border-style: solid;
   text-align: center;
-  color: #3399FF;
+  color: white;
+  text-shadow: 0.5px 0px 0px #3399FF;
   border-color: black;
+  font-family: "Walter Turncoat", cursive;
 }
+
+#memoMenu:hover{
+  text-shadow: 2px 0px 0px #3399FF;
+}
+
 #lingMenu {
   left : 6.25vw;
   text-align: center;
@@ -36,9 +50,16 @@
   border-left: 0;
   border-right: 0.1px;
   border-style: solid;
-  color: #33FF33;
+  color: white;
+  text-shadow: 0.5px 0px 0px #33FF33;
   border-color: black;
+  font-family: "Walter Turncoat", cursive;
 }
+
+#lingMenu:hover{
+  text-shadow: 2px 0px 0px #33FF33;
+}
+
 #logiMenu {
   top : 6.25vh;
   text-align: center;
@@ -47,8 +68,15 @@
   border-left: 0;
   border-style: solid;
   border-color: black;
-  color: #FF3333;
+  color: white;
+  text-shadow: 1px 0px 0px #FF3333;
+  font-family: "Walter Turncoat", cursive;
 }
+
+#logiMenu:hover{
+  text-shadow: 2px 0px 0px #FF3333;
+}
+
 #noteMenu {
   left : 6.25vw;
   top : 6.25vh;
@@ -57,6 +85,12 @@
   border-left: 0;
   border-top: 0;
   text-align: center;
-  color : #FF9933;
+  color: white;
+  text-shadow: 1px 0px 0px #FF9933;
   border-color: black;
+  font-family: "Walter Turncoat", cursive;
+}
+
+#noteMenu:hover{
+  text-shadow: 2px 0px 0px #FF9933;
 }

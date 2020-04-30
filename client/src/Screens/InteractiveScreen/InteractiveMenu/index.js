@@ -1,12 +1,16 @@
 import React from 'react';
 import './index.css';
 import {useHistory} from 'react-router-dom';
+import background from '../../../assets/background.jpg'
 
 function InteractiveMenu(props){
   const history = useHistory();
   return (
     <>
     <div id = "menu">
+
+      <img src={background} className="background-image"></img>
+
       <div id = "memoMenu" className="menuBtn" onClick = {() => {
         history.push( {
           pathname : "/interactive/memory",

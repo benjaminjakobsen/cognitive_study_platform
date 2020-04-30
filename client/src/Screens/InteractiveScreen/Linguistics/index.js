@@ -1,34 +1,44 @@
 import React, {useState} from 'react';
 import './index.css';
-import TopMenu from './TopMenu';
 import {Route} from 'react-router-dom';
+import MenuButton from '../../../GeneralComponents/MenuButton'
+import {useHistory} from 'react-router-dom';
 
 function Linguistics(props){
-  var [render, setRender] = useState(true);
-    var [name, setName] = useState("upArrow");
-    var [topPadding, setTopPadding] = useState("6.25vh");
+  const history = useHistory();
     return(
       <>
-        <div id = "topBtn" style = {{top : topPadding}} onClick = {() => {
-          if(render) {
-            setRender(false);
-            setName("downArrow")
-            setTopPadding("0vh");
-          }
-          else {
-            setRender(true);
-            setName("upArrow")
-            setTopPadding("6.25vh");
-          }
+      <div className = "ling-menu-container">
+        <MenuButton url = "/interactive/linguistics/word_testing" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        left = "50vw"
+        name = "Word Testing" onClick = {() => {
+          history.push('/interactive/linguistics/word_testing')
         }}>
-        <i className={name}> </i>
-        </div>
+        </MenuButton>
 
-        {render ? [
-          <div>
-            <TopMenu />
-          </div>
-        ] : null}
+        <MenuButton url = "/interactive/linguistics/right_word_in_context" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        name = "Word in Context"
+        left = "70vw" onClick = {() => {
+          history.push('/interactive/linguistics/right_word_in_context')
+        }}>
+        </MenuButton>
+
+        <MenuButton url = "/interactive/linguistics/word_classes" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        name = "Word Classes"
+        left = "30vw" onClick = {() => {
+          history.push('/interactive/linguistics/word_classes')
+        }}>
+        </MenuButton>
+      </div>
 
         <Route exact path = {'/interactive/linguistics'}>
           <div id = "Header-container">

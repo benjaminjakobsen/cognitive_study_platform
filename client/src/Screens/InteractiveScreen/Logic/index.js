@@ -1,36 +1,35 @@
 import React, {useState} from 'react';
 import './index.css';
-import TopMenu from './TopMenu';
 import {Route} from 'react-router-dom';
+import MenuButton from '../../../GeneralComponents/MenuButton'
+import {useHistory} from 'react-router-dom';
 
 
 function Logic(props){
-  var [render, setRender] = useState(true);
-  var [name, setName] = useState("upArrow");
-  var [topPadding, setTopPadding] = useState("6.25vh");
-
+  const history = useHistory();
   return (
     <>
-      <div id = "topBtn" style = {{top : topPadding}} onClick = {() => {
-        if(render) {
-          setRender(false);
-          setName("downArrow")
-          setTopPadding("0vh");
-        }
-        else {
-          setRender(true);
-          setName("upArrow")
-          setTopPadding("6.25vh");
-        }
-      }}>
-      <i className={name}> </i>
-      </div>
+      <div className = "logic-menu-container">
+        <MenuButton url = "/interactive/logic/logical_puzzles" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        left = "50vw"
+        name = "Puzzles" onClick = {() => {
+          history.push('/interactive/logic/logical_puzzles')
+        }}>
+        </MenuButton>
 
-      {render ? [
-        <div>
-          <TopMenu />
-        </div>
-      ] : null}
+        <MenuButton url = "/interactive/logic/number_sequence" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        name = "Number Sequence"
+        left = "70vw" onClick = {() => {
+          history.push('/interactive/logic/number_sequence')
+        }}>
+        </MenuButton>
+      </div>
 
       <Route exact path = {'/interactive/logic'}>
         <div id = "Header-container">

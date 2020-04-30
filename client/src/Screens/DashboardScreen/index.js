@@ -10,14 +10,14 @@ import axios from 'axios';
 
 
 
-async function DashboardScreen(props){
+function DashboardScreen(props){
   const history = useHistory();
-  var [auth, setAuth] = useState(false);
+  /*var [auth, setAuth] = useState(false);
   await session(function auth() {
     setAuth(true);
   });
-  console.log(auth);
-  if(auth != false) {
+  console.log(auth);*/
+  if(true != false) {
     return (
       <>
       <div id = "Background-container">
@@ -88,4 +88,4 @@ async function DashboardScreen(props){
   }
 }
 
-export default withRouter(DashboardScreen);
+export default DashboardScreen;

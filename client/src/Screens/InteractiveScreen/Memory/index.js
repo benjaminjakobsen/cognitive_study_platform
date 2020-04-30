@@ -1,36 +1,38 @@
 import React, {useState} from 'react';
 import './index.css';
-import TopMenu from './TopMenu';
 import {Route} from 'react-router-dom';
 import DualNBack from './DualNBack';
 import MemoryPalace from './MemoryPalace';
+import MenuButton from '../../../GeneralComponents/MenuButton'
+import {useHistory} from 'react-router-dom';
 
 function Memory(props){
-    var [render, setRender] = useState(true);
-    var [name, setName] = useState("upArrow");
-    var [topPadding, setTopPadding] = useState("6.25vh");
+    const history = useHistory();
     return(
       <>
-      <div id = "topBtn" style = {{top : topPadding}} onClick = {() => {
-        if(render) {
-          setRender(false);
-          setName("downArrow")
-          setTopPadding("0vh");
-        }
-        else {
-          setRender(true);
-          setName("upArrow")
-          setTopPadding("6.25vh");
-        }
-      }}>
-      <i className={name}> </i>
-      </div>
 
-      {render ? [
-        <div>
-          <TopMenu />
-        </div>
-      ] : null}
+      <div className = "memory-menu-container">
+        <MenuButton url = "/interactive/memory/memory_palace" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        left = "50vw"
+        name = "Memory Palace" onClick = {() => {
+          history.push('/interactive/memory/memory_palace')
+        }}>
+        </MenuButton>
+
+        <MenuButton url = "/interactive/memory/dual_n_back" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        name = "N-back"
+        left = "70vw" onClick = {() => {
+          history.push('/interactive/memory/dual_n_back')
+        }}>
+
+        </MenuButton>
+      </div>
 
       <Route exact path = {'/interactive/memory'}>
         <div id = "Header-container">

@@ -5,6 +5,7 @@ import DualNBack from './DualNBack';
 import MemoryPalace from './MemoryPalace';
 import MenuButton from '../../../GeneralComponents/MenuButton'
 import {useHistory} from 'react-router-dom';
+import Learn from './MemoryPalace/Learn';
 
 function Memory(props){
     const history = useHistory();
@@ -50,6 +51,9 @@ function Memory(props){
       </Route>
       <Route exact path = {`/interactive/memory/dual_n_back`}>
         <DualNBack/>
+      </Route>
+      <Route exact path = {'/interactive/memory/memory_palace/learn'}>
+        <Learn/>
       </Route>      
       
     </>

@@ -33,7 +33,7 @@ class DualNBack extends Component {
     if(this.rounds > 0){
       setTimeout(() => {
         var pos = Math.ceil(Math.random() * 9) - 1;
-        document.getElementById(pos).style.backgroundColor = "rgb(255, 195, 11)";
+        document.getElementById(pos).style.backgroundColor = "rgb(0, 98, 255)";
         this.order[0].unshift(pos);
         this.rounds -= 1;
         setTimeout(() => this.checkPos(), 950);
@@ -79,7 +79,7 @@ class DualNBack extends Component {
 
         <div className = "dropdown-container">
           <Dropdown>
-            <Dropdown.Toggle id="dropdown-class" variant="warning">
+            <Dropdown.Toggle id="dropdown-class" variant="primary">
             Choose your N
             </Dropdown.Toggle>
             <Dropdown.Menu className ="dropdown-menu">

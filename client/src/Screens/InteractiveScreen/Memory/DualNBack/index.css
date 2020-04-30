@@ -129,6 +129,8 @@
     height: 4vh;
     font-size: 1vw;
     font-weight: 600;
+    color : white;
+    background-color: rgb(0, 98, 255);
 }
 
 .dropdown-menu{
@@ -148,7 +150,7 @@
     cursor : pointer;
     left : 36.5vw;
     top : 78vh;
-    background-color: rgb(192, 255, 192);
+    background-color: lightgreen;
 }
 
 .dual-button-class:active{

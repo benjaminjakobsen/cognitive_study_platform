@@ -19,9 +19,12 @@ function SignIn(props) {
           </Form.Text>
         </Form.Group>
         <Button className ="login-btn" variant ="secondary" onClick = {() => {
-          axios.post('/api/users/login', {
+          axios.post('/api/auth/login', {
             "password" : passwordRef.current.value,
             "email" : emailRef.current.value
+          }).then((response) => {
+            console.log(response);
+            localStorage.setItem('token', response.data.token);
           })
         }}>
           Login

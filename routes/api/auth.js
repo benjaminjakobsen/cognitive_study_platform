@@ -1,10 +1,14 @@
 const express = require('express'); //require express
 const router = express.Router(); //creates express router, which handles routes
-
+const authentication = require('../../helpfunc/authenticate');
 const keys = require('../../config/keys');
 const jwt = require('jsonwebtoken');
 
 const User = require('../../models/User'); //
+
+router.get('/sessionCheck', authentication, (req, res) => {
+  return res.status(200).json({msg: "Session true"});
+})
 
 router.post('/login', (req, res) => {
   if(!req.body.password || !req.body.email) {

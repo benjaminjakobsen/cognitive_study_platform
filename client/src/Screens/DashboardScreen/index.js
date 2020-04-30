@@ -6,12 +6,17 @@ import background from '../../assets/background.jpg'
 import {withRouter} from 'react-router';
 import Memory from '../InteractiveScreen/Memory'
 import session from '../../authentication'
+import axios from 'axios';
 
 
 
-function DashboardScreen(props){
+async function DashboardScreen(props){
   const history = useHistory();
-  let auth = session();
+  var [auth, setAuth] = useState(false);
+  await session(function auth() {
+    setAuth(true);
+  });
+  console.log(auth);
   if(auth != false) {
     return (
       <>

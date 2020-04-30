@@ -1,20 +1,30 @@
 import axios from 'axios'
 
 
+function Session(res) {
+  /*
+    let getToken = new Promise(function(resolve, reject) {
+        setTimeout(() => resolve(localStorage.getItem('token')), 200)
 
-const Session = () => {
-  const token = localStorage.getItem(token);
-  const config = {
-    header: {
-      "Content-type": "application/json"
+        await getToken.then((toke) => {
+            token = toke;
+        })
+    }); */
+    let token = localStorage.getItem('token');
+    const config = {
+      headers: {
+        'Content-type': 'application/json'
+      }
     }
-  }
-  if(token) {
-    config.headers['token'] = token;
-  }
-  axios.get('/api/auth/sessionCheck', config).then((res) => {
-    console.log("hello")
-  })
+    if(token) {
+      config.headers['token'] = token;
+    }
+    return axios.get('/api/auth/sessionCheck', config).then((res) => {
+      return true;
+    })
+    .catch((err) => {
+      return false;
+    })
 }
 
 export default Session;

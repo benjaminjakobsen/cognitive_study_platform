@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import './index.css';
 import {Form, Button} from 'react-bootstrap'
 import axios from 'axios';
+import {Route, useHistory} from 'react-router-dom';
 
 
 function Register(props){
@@ -9,6 +10,7 @@ function Register(props){
   const passwordRef = useRef(null);
   const emailRef = useRef(null);
   const confirmPasswordRef = useRef(null);
+  const history = useHistory();
   return (
     <>
     <div className = "register-container">
@@ -38,7 +40,11 @@ function Register(props){
             "password" : passwordRef.current.value,
             "email" : emailRef.current.value
           })
-          .then((res) => {console.log(res);})}
+          .then((res) => {
+            history.push({
+              pathname : '/dashboard'
+            })
+          })}
         }}
         >
         Create Account

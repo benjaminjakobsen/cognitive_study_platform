@@ -1,9 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.scss';
 import HomeScreen from './Screens/HomeScreen';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import DashboardScreen from './Screens/DashboardScreen';
 import InteractiveScreen from './Screens/InteractiveScreen';
+import session from './authentication'
+
+
+const PrivateRoute = ({component : Component, ...rest}) => {
+  const [auth, setAuth] = useState(true);
+  session().then((res) => {setAuth(res)});
+  return (
+  <Route {...rest} render={props =>
+
+    (
+    auth ? (
+      <Component {...props}/>
+    ) : (
+      <Redirect to = {{pathname: '/'}} />
+    )
+  )}
+  />);
+}
 
 function App() {
   return (
@@ -13,15 +31,9 @@ function App() {
         <Route exact path={"/"}>
             <HomeScreen/>
         </Route>
-        <Route exact path={"/dashboard"}>
-          <DashboardScreen/>
-        </Route>
-        <Route path={"/interactive"}>
-          <InteractiveScreen/>
-        </Route>
-        <Route path={"/interactive/*"}>
-          <InteractiveScreen/>
-        </Route>
+        <PrivateRoute exact path={"/dashboard"} component={DashboardScreen}/>
+        <PrivateRoute path={"/interactive"} component={InteractiveScreen}/>
+        <PrivateRoute path={"/interactive/*"} component={InteractiveScreen}/>
         <Route path="/*">
             <h1>The URL does not exist</h1>
         </Route>

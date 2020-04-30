@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../../models/User'); //
 
 router.get('/sessionCheck', authentication, (req, res) => {
-  return res.status(200).json({msg: "Session true"});
+  return res.status(200).json({msg: true});
 })
 
 router.post('/login', (req, res) => {
@@ -23,7 +23,7 @@ router.post('/login', (req, res) => {
         jwt.sign(
           { id: user.id },
           keys.jwtSecret,
-          { expiresIn: 3600 },
+          { expiresIn: 1800 },
           (err, token) => {
             if(err) throw err;
             res.json({

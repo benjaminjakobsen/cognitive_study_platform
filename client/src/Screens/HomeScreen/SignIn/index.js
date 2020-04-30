@@ -1,10 +1,12 @@
 import React, {useRef} from 'react';
 import './index.css';
 import {Form, Button} from 'react-bootstrap';
+import {Route, useHistory} from 'react-router-dom';
 import axios from 'axios';
 function SignIn(props) {
   const passwordRef = useRef(null);
   const emailRef = useRef(null);
+  const history = useHistory();
   return (
     <>
     <div className = "login-container">
@@ -23,8 +25,10 @@ function SignIn(props) {
             "password" : passwordRef.current.value,
             "email" : emailRef.current.value
           }).then((response) => {
-            console.log(response);
             localStorage.setItem('token', response.data.token);
+            history.push({
+              pathname : '/dashboard'
+            })
           })
         }}>
           Login

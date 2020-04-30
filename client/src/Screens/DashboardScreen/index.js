@@ -74,4 +74,4 @@ function DashboardScreen(props){
     );
 }
 
-export default withRouter(DashboardScreen);
+export default DashboardScreen;

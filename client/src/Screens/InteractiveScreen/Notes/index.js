@@ -1,34 +1,34 @@
 import React, {useState} from 'react';
 import './index.css';
-import TopMenu from './TopMenu';
 import {Route} from 'react-router-dom';
+import MenuButton from '../../../GeneralComponents/MenuButton'
+import {useHistory} from 'react-router-dom';
 
 function Notes(props){
-  var [render, setRender] = useState(true);
-  var [name, setName] = useState("upArrow");
-  var [topPadding, setTopPadding] = useState("6.25vh");
+  const history = useHistory();
   return(
     <>
-      <div id = "topBtn" style = {{top : topPadding}} onClick = {() => {
-        if(render) {
-          setRender(false);
-          setName("downArrow")
-          setTopPadding("0vh");
-        }
-        else {
-          setRender(true);
-          setName("upArrow")
-          setTopPadding("6.25vh");
-        }
-      }}>
-      <i className={name}> </i>
-      </div>
+      <div className = "notes-menu-container">
+        <MenuButton url = "/interactive/notes/notepad" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        left = "50vw"
+        name = "Notepad" onClick = {() => {
+          history.push('/interactive/notes/notepad')
+        }}>
+        </MenuButton>
 
-      {render ? [
-        <div>
-          <TopMenu />
-        </div>
-      ] : null}
+        <MenuButton url = "/interactive/notes/note_organizing" 
+        width = "15vw" 
+        height = "6.25vh"
+        colorOfText = "white" 
+        name = "Note Organizing"
+        left = "70vw" onClick = {() => {
+          history.push('/interactive/notes/note_organizing')
+        }}>
+        </MenuButton>
+      </div>
 
       <Route exact path = {'/interactive/notes'}>
         <div id = "Header-container">

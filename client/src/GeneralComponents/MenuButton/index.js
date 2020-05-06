@@ -7,9 +7,6 @@ function MenuButton(props){
 
     <div className = "menuButton" style = {{
       fontSize : props.fontSize,
-      height : props.height,
-      width : props.width,
-      textAlign : "center",
       color : props.colorOfText,
       boxShadow : window.location.pathname == props.url ? "0px 2px 2px 1px black" : "unset",
       backgroundColor : props.color,

@@ -3,6 +3,7 @@ import './index.css';
 import {Route} from 'react-router-dom';
 import MenuButton from '../../../GeneralComponents/MenuButton'
 import {useHistory} from 'react-router-dom';
+import ProfileButton from '../../../GeneralComponents/ProfileButton'
 
 function Linguistics(props){
   const history = useHistory();
@@ -10,34 +11,27 @@ function Linguistics(props){
       <>
       <div className = "ling-menu-container">
         <MenuButton url = "/interactive/linguistics/word_testing" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
-        left = "50vw"
+        left = "43vw"
         name = "Word Testing" onClick = {() => {
           history.push('/interactive/linguistics/word_testing')
-        }}>
-        </MenuButton>
+        }}/>
 
         <MenuButton url = "/interactive/linguistics/right_word_in_context" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
         name = "Word in Context"
-        left = "70vw" onClick = {() => {
+        left = "63vw" onClick = {() => {
           history.push('/interactive/linguistics/right_word_in_context')
-        }}>
-        </MenuButton>
+        }}/>
 
         <MenuButton url = "/interactive/linguistics/word_classes" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
         name = "Word Classes"
-        left = "30vw" onClick = {() => {
+        left = "23vw" onClick = {() => {
           history.push('/interactive/linguistics/word_classes')
-        }}>
-        </MenuButton>
+        }}/>
+
+        <ProfileButton/>
       </div>
 
         <Route exact path = {'/interactive/linguistics'}>

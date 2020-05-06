@@ -1,5 +1,8 @@
 .menuButton{
     position : absolute;
+    width : 15vw;
+    height : 6.25vh;
+    text-align: center;
 }
 
 .menuButton:hover{

@@ -15,23 +15,23 @@ function Register(props){
     <>
     <div className = "register-container">
       <Form>
-        <Form.Group className = "group">
-          <Form.Label> Username </Form.Label>
-          <Form.Control type="text" ref={usernameRef}/>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Username </Form.Label>
+          <Form.Control className = "group2" type="text" ref={usernameRef}/>
         </Form.Group>
-        <Form.Group className = "group">
-          <Form.Label> Email </Form.Label>
-          <Form.Control type="email" ref={emailRef}/>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Email </Form.Label>
+          <Form.Control className = "group2" type="email" ref={emailRef}/>
         </Form.Group>
-        <Form.Group className = "group">
-          <Form.Label> Password </Form.Label>
-          <Form.Control type="password" ref={passwordRef}/>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Password </Form.Label>
+          <Form.Control className = "group2" type="password" ref={passwordRef}/>
         </Form.Group>
-        <Form.Group className = "group">
-          <Form.Label> Confirm Password </Form.Label>
-          <Form.Control type="password" ref={confirmPasswordRef}/>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Confirm Password </Form.Label>
+          <Form.Control className = "group2" type="password" ref={confirmPasswordRef}/>
         </Form.Group>
-        <Button variant ="secondary" onClick = {() => {if(passwordRef.current.value != confirmPasswordRef.current.value){
+        <Button className = "create-account" variant ="secondary" onClick = {() => {if(passwordRef.current.value != confirmPasswordRef.current.value){
           alert("Passwords must match");
         }
         else{
@@ -41,6 +41,7 @@ function Register(props){
             "email" : emailRef.current.value
           })
           .then((res) => {
+            localStorage.setItem('token', res.data.token);
             history.push({
               pathname : '/dashboard'
             })

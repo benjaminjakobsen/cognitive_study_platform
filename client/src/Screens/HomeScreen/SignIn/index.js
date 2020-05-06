@@ -11,14 +11,13 @@ function SignIn(props) {
     <>
     <div className = "login-container">
       <Form>
-        <Form.Group className = "group">
-          <Form.Control type="email" placeholder ="Enter email" ref={emailRef}/>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Email </Form.Label>
+          <Form.Control className = "group" type="email" placeholder ="Enter email" ref={emailRef}/>
         </Form.Group>
-        <Form.Group className = "group">
-
-          <Form.Control type="Password" placeholder ="Enter password" ref={passwordRef}/>
-          <Form.Text className ="text-muted">
-          </Form.Text>
+        <Form.Group>
+          <Form.Label style = {{color : "white"}}> Password </Form.Label>
+          <Form.Control className = "form-control group" type="Password" placeholder ="Enter password" ref={passwordRef}/>
         </Form.Group>
         <Button className ="login-btn" variant ="secondary" onClick = {() => {
           axios.post('/api/auth/login', {

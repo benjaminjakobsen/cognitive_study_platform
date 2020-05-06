@@ -9,7 +9,9 @@ import session from './authentication'
 
 const PrivateRoute = ({component : Component, ...rest}) => {
   const [auth, setAuth] = useState(true);
-  session().then((res) => {setAuth(res)});
+  useEffect(() => {
+    session().then((res) => {setAuth(res)});
+  }, []);
   return (
   <Route {...rest} render={props =>
 

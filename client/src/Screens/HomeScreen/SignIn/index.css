@@ -2,9 +2,11 @@
   color : #FCF6F5FF;
   width : 15vw;
   padding-bottom: 2vh;
+  margin-bottom: 5vh;
 }
 .login-container{
   width : 15vw;
+  height : 10vh;
 }
 .login-btn {
   margin-left: 5vw;

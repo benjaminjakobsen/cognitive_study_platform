@@ -1,8 +1,14 @@
 
-.group {
+.group2 {
   width : 15vw;
   color : white;
+  margin-bottom: 5vh;
 }
 .register-container{
   width : 15vw;
+}
+.create-account {
+  position: absolute;
+  width : 7.5vw;
+  left : 3.75vw;
 }

@@ -6,6 +6,7 @@ import MemoryPalace from './MemoryPalace';
 import MenuButton from '../../../GeneralComponents/MenuButton'
 import {useHistory} from 'react-router-dom';
 import Learn from './MemoryPalace/Learn';
+import ProfileButton from '../../../GeneralComponents/ProfileButton'
 
 function Memory(props){
     const history = useHistory();
@@ -14,25 +15,20 @@ function Memory(props){
 
       <div className = "memory-menu-container">
         <MenuButton url = "/interactive/memory/memory_palace" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
-        left = "50vw"
+        left = "43vw"
         name = "Memory Palace" onClick = {() => {
           history.push('/interactive/memory/memory_palace')
-        }}>
-        </MenuButton>
+        }}/>
 
         <MenuButton url = "/interactive/memory/dual_n_back" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
         name = "N-back"
-        left = "70vw" onClick = {() => {
+        left = "63vw" onClick = {() => {
           history.push('/interactive/memory/dual_n_back')
-        }}>
+        }}/>
 
-        </MenuButton>
+        <ProfileButton/>
       </div>
 
       <Route exact path = {'/interactive/memory'}>

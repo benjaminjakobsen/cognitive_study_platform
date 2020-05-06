@@ -4,7 +4,8 @@ import HomeScreen from './Screens/HomeScreen';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import DashboardScreen from './Screens/DashboardScreen';
 import InteractiveScreen from './Screens/InteractiveScreen';
-import session from './authentication'
+import ProfileScreen from './Screens/ProfileScreen';
+import session from './authentication';
 
 
 const PrivateRoute = ({component : Component, ...rest}) => {
@@ -34,6 +35,8 @@ function App() {
         <PrivateRoute exact path={"/dashboard"} component={DashboardScreen}/>
         <PrivateRoute path={"/interactive"} component={InteractiveScreen}/>
         <PrivateRoute path={"/interactive/*"} component={InteractiveScreen}/>
+        <PrivateRoute path={"/profile"} component={ProfileScreen}/>
+        <PrivateRoute path={"/profile/*"} component={ProfileScreen}/>
         <Route path="/*">
             <h1>The URL does not exist</h1>
         </Route>

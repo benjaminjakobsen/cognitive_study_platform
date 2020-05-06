@@ -1,0 +1,12 @@
+.image-container{
+    width : 2vw;
+    height : 3.5vh;
+}
+
+.profile-button-container{
+    position : absolute;
+    left : 83vw;
+    height : 6.25vh;
+    width : 3.5vw;
+    cursor : pointer;
+}

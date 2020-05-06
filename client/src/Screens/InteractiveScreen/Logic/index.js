@@ -3,6 +3,7 @@ import './index.css';
 import {Route} from 'react-router-dom';
 import MenuButton from '../../../GeneralComponents/MenuButton'
 import {useHistory} from 'react-router-dom';
+import ProfileButton from '../../../GeneralComponents/ProfileButton'
 
 
 function Logic(props){
@@ -11,24 +12,20 @@ function Logic(props){
     <>
       <div className = "logic-menu-container">
         <MenuButton url = "/interactive/logic/logical_puzzles" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
-        left = "50vw"
+        left = "43vw"
         name = "Puzzles" onClick = {() => {
           history.push('/interactive/logic/logical_puzzles')
-        }}>
-        </MenuButton>
+        }}/>
 
         <MenuButton url = "/interactive/logic/number_sequence" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
         name = "Number Sequence"
-        left = "70vw" onClick = {() => {
+        left = "63vw" onClick = {() => {
           history.push('/interactive/logic/number_sequence')
-        }}>
-        </MenuButton>
+        }}/>
+
+        <ProfileButton/>
       </div>
 
       <Route exact path = {'/interactive/logic'}>

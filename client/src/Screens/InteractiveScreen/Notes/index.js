@@ -3,6 +3,7 @@ import './index.css';
 import {Route} from 'react-router-dom';
 import MenuButton from '../../../GeneralComponents/MenuButton'
 import {useHistory} from 'react-router-dom';
+import ProfileButton from '../../../GeneralComponents/ProfileButton'
 
 function Notes(props){
   const history = useHistory();
@@ -10,24 +11,20 @@ function Notes(props){
     <>
       <div className = "notes-menu-container">
         <MenuButton url = "/interactive/notes/notepad" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
-        left = "50vw"
+        left = "43vw"
         name = "Notepad" onClick = {() => {
           history.push('/interactive/notes/notepad')
-        }}>
-        </MenuButton>
+        }}/>
 
         <MenuButton url = "/interactive/notes/note_organizing" 
-        width = "15vw" 
-        height = "6.25vh"
         colorOfText = "white" 
         name = "Note Organizing"
-        left = "70vw" onClick = {() => {
+        left = "63vw" onClick = {() => {
           history.push('/interactive/notes/note_organizing')
-        }}>
-        </MenuButton>
+        }}/>
+        
+        <ProfileButton/>
       </div>
 
       <Route exact path = {'/interactive/notes'}>

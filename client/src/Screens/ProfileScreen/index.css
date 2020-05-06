@@ -1,0 +1,12 @@
+.profile-menu-container{
+    position: absolute;
+    width : 87.5vw;
+    height : 6.25vh;
+    background: rgb(40,40,40);
+    background: linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(36,36,36,1) 13%, rgba(29,29,29,1) 24%, rgba(21,21,23,1) 43%, rgb(63, 63, 63) 59%, rgb(77, 77, 77) 80%, rgb(139, 139, 139) 100%); 
+    left : 12.5vw;
+    font-size: 2.5vh;
+    line-height: 6vh;
+    font-family: "Walter Turncoat", cursive;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}

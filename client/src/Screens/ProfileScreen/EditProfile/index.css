@@ -1,0 +1,10 @@
+.edit-profile-container{
+    position: absolute;
+    width : 40vw;
+    height : 70vh;
+    left : 30vw;
+    top : 15vh;
+    border : 2px lightgrey;
+    border-style : groove;
+    border-radius: 2vw;
+}

@@ -31,6 +31,8 @@
   font-weight: 100;
   font-size: 2.5vw;
   width: 12vw;
+  height : 8vh;
+  line-height: 8vh;
   border-top-left-radius : 15px;
   border-bottom-left-radius: 15px;
 }
@@ -43,7 +45,8 @@
 .register-header {
   font-weight: 100;
   width: 12.5vw;
-  height : 7vh;
+  height : 8vh;
+  line-height: 8vh;
   font-size: 2.5vw;
   background-color: lightgrey;
   border-top-right-radius : 15px;
@@ -51,7 +54,7 @@
 }
 .divider {
   background-color: grey;
-  height : 7vh;
+  height : 8vh;
   width : 0.1vw;
 }
 .content {

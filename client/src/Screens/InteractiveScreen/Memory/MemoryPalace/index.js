@@ -20,7 +20,7 @@ function MemoryPalace(props){
         <div className = {"Text-container"}>
           <div id = "left-btn">
           <GeneralButton name = "Create a new palace"
-            size = "2.5vh" colorOfText = "black"
+            size = "2.5vh" colorOfText = "white"
             onClick={() => {
               history.push(`./memory_palace/create`)
               }}/>
@@ -28,7 +28,7 @@ function MemoryPalace(props){
 
           <div id = "right-btn">
           <GeneralButton name = "List of your palaces"
-            size = "2.5vh" colorOfText = "black"
+            size = "2.5vh" colorOfText = "white"
             onClick={() => {
               history.push(`./memory_palace/list_of_palaces`)
               }}/>
@@ -38,7 +38,7 @@ function MemoryPalace(props){
         <div className = {"Text-container"}>
           <div id = "left-btn">
           <GeneralButton name = "Test yourself in a random palace"
-            size = "2.5vh" colorOfText = "black"
+            size = "2.5vh" colorOfText = "white"
             onClick={() => {
               history.push(`./memory_palace/test`)
               }}/>
@@ -46,11 +46,11 @@ function MemoryPalace(props){
 
           <div id = "right-btn">
             <GeneralButton name = "Learn the Memory Palace Technique"
-            size = "2.5vh" colorOfText = "black"
+            size = "2.5vh" colorOfText = "white"
             onClick={() => {
               history.push(`./memory_palace/learn`)
               }}/>
-          </div>          
+          </div>
         </div>
       </div>
     </>

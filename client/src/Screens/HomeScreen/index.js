@@ -31,10 +31,16 @@ function HomeScreen(props){
         <div className = "content">
             {state ? [
                 <div className = "signin-content">
+                  <div className = "sign-in-text">
+                  Sign In
+                  </div>
                   <SignIn/>
                 </div>
               ] : [
                 <div className = "register-content">
+                  <div className = "register-text">
+                  Register
+                  </div>
                   <Register/>
                 </div>] }
         </div>

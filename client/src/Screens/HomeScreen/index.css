@@ -29,10 +29,10 @@
 
 .signin-header {
   font-weight: 100;
-  font-size: 2.5vw;
-  width: 12vw;
-  height : 8vh;
-  line-height: 8vh;
+  font-size: 1.5rem;
+  width: 7vw;
+  height : 5vh;
+  line-height: 5vh;
   border-top-left-radius : 15px;
   border-bottom-left-radius: 15px;
 }
@@ -44,17 +44,17 @@
 }
 .register-header {
   font-weight: 100;
-  width: 12.5vw;
-  height : 8vh;
-  line-height: 8vh;
-  font-size: 2.5vw;
+  width: 7vw;
+  height : 5vh;
+  line-height: 5vh;
+  font-size: 1.5rem;
   background-color: lightgrey;
   border-top-right-radius : 15px;
   border-bottom-right-radius: 15px;
 }
 .divider {
   background-color: grey;
-  height : 8vh;
+  height : 5vh;
   width : 0.1vw;
 }
 .content {
@@ -77,12 +77,30 @@
   position: absolute;
   top : 20vh;
 }
+.sign-in-text{
+  position: absolute;
+  color : white;
+  font-size: 2.5rem;
+  width : 15vw;
+  text-align: center;
+  top : -12vh;
+
+}
+.register-text{
+  position: absolute;
+  color : white;
+  font-size: 2.5rem;
+  width : 15vw;
+  text-align: center;
+  top : -12vh;
+
+}
 .headers {
   background-color: #FCF6F5FF;
   border-radius: 15px;
   position: absolute;
-  top : 11vh;
-  height : 7vh;
-  width : 24.6vw;
-  left : 62.5vw;
+  top : 3vh;
+  height : 5vh;
+  width : 14.1vw;
+  left : 84vw;
 }

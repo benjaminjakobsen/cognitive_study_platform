@@ -10,3 +10,44 @@
     width : 3.5vw;
     cursor : pointer;
 }
+
+
+.profile-dropdown-container{
+    position: absolute;
+    width : 6vw;
+    height : 8vh;
+    background-color: rgb(245, 245, 245);
+    left : 81vw;
+    top : 5.5vh;
+    border-radius: 0.5vh; 
+    display: flex;
+    flex-direction: column;
+    text-shadow: none;
+    font-weight: 600;
+    font-family: Monospace;
+}
+
+.profile-dropdown-item{
+    position : relative;
+    width : 6vw;
+    text-align: center;
+    flex : 1;
+    font-size: 1.3vh;
+    line-height: 2.5vh;
+}
+
+.profile-dropdown-item:hover{
+    background-color: lightgray;
+    cursor : pointer;
+}
+
+#top-item{
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+}
+
+#bot-item{
+    border-bottom-left-radius: 0.5vh;
+    border-bottom-right-radius: 0.5vh;
+}
+

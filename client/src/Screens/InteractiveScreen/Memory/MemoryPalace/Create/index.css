@@ -4,7 +4,6 @@
   top : 20vh;
   width : 30vw;
   height : 70vh;
-  border : 2px solid black;
   border-radius: 10px;
 }
 .create-palace-header {
@@ -16,4 +15,7 @@
   font-weight: 100;
   width : 30vw;
   height : 60vh;
+}
+.create-palace-name {
+  width : 10vw
 }

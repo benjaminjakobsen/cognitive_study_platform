@@ -19,7 +19,7 @@
     background-color: rgb(245, 245, 245);
     left : 81vw;
     top : 5.5vh;
-    border-radius: 0.5vh; 
+    border-radius: 0.5vh;
     display: flex;
     flex-direction: column;
     text-shadow: none;
@@ -34,6 +34,7 @@
     flex : 1;
     font-size: 1.3vh;
     line-height: 2.5vh;
+    font-weight: 530;
 }
 
 .profile-dropdown-item:hover{
@@ -50,4 +51,3 @@
     border-bottom-left-radius: 0.5vh;
     border-bottom-right-radius: 0.5vh;
 }
-

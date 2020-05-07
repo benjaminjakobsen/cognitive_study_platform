@@ -37,7 +37,7 @@ function MemoryPalace(props){
 
         <div className = {"Text-container"}>
           <div id = "left-btn">
-          <GeneralButton name = "Test yourself in a random palace"
+          <GeneralButton name = "Test yourself in a chosen palace"
             size = "2.5vh" colorOfText = "white"
             onClick={() => {
               history.push(`./memory_palace/test`)

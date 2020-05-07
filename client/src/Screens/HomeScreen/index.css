@@ -43,6 +43,7 @@
 .register-header {
   font-weight: 100;
   width: 12.5vw;
+  height : 7vh;
   font-size: 2.5vw;
   background-color: lightgrey;
   border-top-right-radius : 15px;

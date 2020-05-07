@@ -4,7 +4,53 @@
     height : 70vh;
     left : 30vw;
     top : 15vh;
-    border : 2px lightgrey;
-    border-style : groove;
     border-radius: 2vw;
 }
+
+.change-settings-username{
+    width : 15vw;
+    position: absolute;
+    top : 15vh;
+    left : 12.5vw;
+}
+
+.change-settings-password{
+    width : 15vw;
+    position: absolute;
+    top : 30vh;
+    left : -2.5vw;
+}
+
+.change-settings-email{
+    width : 15vw;
+    position: absolute;
+    top : 41vh;
+    left : 12.5vw;
+}
+
+.edit-profile-text{
+    font-size: 2vh;
+    position: absolute;
+    left : 12.5vw;
+}
+
+#username-text{
+    top : 11vh;
+}
+
+#password-text{
+    top : 26vh;
+}
+
+#email-text{
+    top : 41vh;
+}
+
+.edit-profile-header{
+    font-size: 4vh;
+    position: absolute;
+    width : 100%;
+    top : 14vh;
+    text-align: center;
+}
+

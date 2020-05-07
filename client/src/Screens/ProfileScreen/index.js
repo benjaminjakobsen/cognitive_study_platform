@@ -6,6 +6,7 @@ import {useHistory} from 'react-router-dom';
 import Statistics from './Statistics';
 import EditProfile from './EditProfile';
 import {Route} from 'react-router-dom';
+import ProfileButton from '../../GeneralComponents/ProfileButton';
 
 function ProfileScreen(props){
   const history = useHistory();
@@ -27,7 +28,11 @@ function ProfileScreen(props){
         left = "63vw" onClick = {() => {
           history.push('/profile/stats')
         }}/>
+
+        <ProfileButton/>
       </div>
+
+      
 
       <Route exact path = {`/profile/edit_profile`}>
         <EditProfile/>

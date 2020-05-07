@@ -37,7 +37,6 @@ function HomeScreen(props){
                 <div className = "register-content">
                   <Register/>
                 </div>] }
-
         </div>
       </div>
 

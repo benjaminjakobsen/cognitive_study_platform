@@ -30,12 +30,29 @@ function EditProfile(props){
       </div>
       <div className = "edit-profile-container">
         <p id = "username-text" className = "edit-profile-text">Choose a new username below</p>
-        <TextField className = "change-settings-username" label = "New Username" variant = "outlined"/>
+        <TextField inputRef = {usernameRef} className = "change-settings-username" label = "New Username" variant = "outlined"/>
         <p id = "password-text" className = "edit-profile-text">Choose a new password below</p>
-        <TextField className = "change-settings-password" label = "New Password" variant = "outlined"/>
+        <TextField inputRef = {passwordRef} className = "change-settings-password" label = "New Password" variant = "outlined"/>
         <p id = "email-text" className = "edit-profile-text">Choose a new email below</p>
-        <TextField className = "change-settings-email" label = "New Email" variant = "outlined"/>
-        <Button variant = "contained" className = {classes.editButton}>Update Settings</Button>
+        <TextField inputRef = {emailRef} className = "change-settings-email" label = "New Email" variant = "outlined"/>
+        <Button variant = "contained" className = {classes.editButton} onClick={() => {
+          console.log(usernameRef.current.value);
+          let token = localStorage.getItem('token');
+          const config = {
+            headers: {
+              'Content-type': 'application/json'
+            },
+            body: {
+              "username" : usernameRef.current.value,
+              "password" : passwordRef.current.value,
+              "email" : emailRef.current.value
+            }
+          }
+          if(token) {
+            config.headers['token'] = token;
+          }
+          axios.post('/api/users/edit', config.body, {headers: config.headers})
+        }}>Update Settings</Button>
       </div>
     </>
   );

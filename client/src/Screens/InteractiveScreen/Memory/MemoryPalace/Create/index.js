@@ -5,7 +5,8 @@ import {Button, Fab, List, ListItem, ListItemIcon,ListItemText, Modal, TextField
 
 const styles = {
   createPalaceName : {
-    width : "10vw"
+    width : "10vw",
+    left : "10vw"
   }
 }
 

@@ -59,7 +59,6 @@ class DualNBack extends Component {
       this.rounds = 20;
       this.overStart = false;
       this.setState({start : true});
-
     }
   }
 

@@ -19,6 +19,7 @@ function Session(res) {
     if(token) {
       config.headers['token'] = token;
     }
+
     return axios.get('/api/auth/sessionCheck', config).then((res) => {
       return true;
     })

@@ -23,7 +23,7 @@ router.post('/register', (req, res) => { //Post request
       jwt.sign(
         { id: user.id },
         keys.jwtSecret,
-        { expiresIn: 50 },
+        { expiresIn: 3600 },
         (err, token) => {
           if(err) throw err;
           res.json({
@@ -38,6 +38,28 @@ router.post('/register', (req, res) => { //Post request
       )
   }); //Tries to save the newly created object in database and if promise fullfilled then send response with the object in json format.
 });
+
+router.post('/edit', authentication, (req, res) => {
+  let updateUserObject = {}
+  if(req.body.username != ""){
+    updateUserObject.username = req.body.username;
+  } 
+  if(req.body.password != ""){
+    updateUserObject.password = req.body.password;
+  }
+  if(req.body.email != ""){
+    updateUserObject.email = req.body.email
+  }
+  User.findOneAndUpdate(req.body.id, updateUserObject) 
+    .then(user => res.status(200).json({msg : "Data successfully changed"}))
+    .catch(err => res.status(404).json({msg : "An unknown error accured"}))
+})
+
+router.post('/info', authentication, (req, res) => {
+  User.findById(req.body.id)
+    .then(user =>  res.json(user))
+    .catch(err => res.status(404).json({msg: "user not found"}))
+})
 
 
 router.delete('/delete', authentication, (req, res) => { //Delete request

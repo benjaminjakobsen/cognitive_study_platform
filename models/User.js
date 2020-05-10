@@ -16,6 +16,9 @@ const UserSchema = new Schema({ //Creates a schema
     },
     nback: {
       type : Array
+    },
+    palaces : {
+      type : Array
     }
 });
 

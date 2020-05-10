@@ -5,6 +5,7 @@ const keys = require('../../config/keys');
 const jwt = require('jsonwebtoken');
 
 const User = require('../../models/User'); //
+const MemoryPalace = require('../../models/MemoryPalaces');
 
 router.get('/', (req, res) => { //Get request
   User.findById()
@@ -75,8 +76,31 @@ router.post('/nback', authentication, (req, res) => {
       "nback" : req.body.nback
   }})
     .then(user => res.status(200).json({msg : "successfull"}))
-    .catch(error => res.status(400).json({msg: "not succesfull"}))
+    .catch(error => res.status(400).json({msg: "not succesful"}))
 })
+
+router.post('/createPalace', authentication, (req, res) =>  {
+  console.log(req.body);
+  const newPalace = new MemoryPalace({
+    name : req.body.palaceName,
+    items : req.body.items
+  })
+  newPalace.save()
+    .then(palace => {
+      User.findByIdAndUpdate(req.body.id, {
+        "$push" : {
+          "palaces" : palace.id
+        }
+      })
+      .then(user => {
+        res.status(200).json({msg : "successfull"});
+      })
+      .catch(err => {
+        res.status(400).json({msg : "not succesful"});
+      })
+    })
+    .catch(err => res.status(400).json({msg : "not succesful"}))
+  });
 
 
 

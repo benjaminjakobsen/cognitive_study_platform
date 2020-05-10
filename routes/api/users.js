@@ -69,5 +69,15 @@ router.delete('/delete', authentication, (req, res) => { //Delete request
 })
 
 
+router.post('/nback', authentication, (req, res) => {
+  User.findByIdAndUpdate(req.body.id, {
+    "$push" : {
+      "nback" : req.body.nback
+  }})
+    .then(user => res.status(200).json({msg : "successfull"}))
+    .catch(error => res.status(400).json({msg: "not succesfull"}))
+})
+
+
 
 module.exports = router; //exports the router

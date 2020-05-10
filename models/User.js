@@ -13,6 +13,9 @@ const UserSchema = new Schema({ //Creates a schema
     email: {
       type : String,
       required : true
+    },
+    nback: {
+      type : Array
     }
 });
 

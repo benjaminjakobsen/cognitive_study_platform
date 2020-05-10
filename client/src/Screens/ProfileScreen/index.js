@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import './index.css';
 import InteractiveMenu from '../InteractiveScreen/InteractiveMenu'
 import MenuButton from '../../GeneralComponents/MenuButton'
@@ -7,9 +7,11 @@ import Statistics from './Statistics';
 import EditProfile from './EditProfile';
 import {Route} from 'react-router-dom';
 import ProfileButton from '../../GeneralComponents/ProfileButton';
+import axios from 'axios';
 
 function ProfileScreen(props){
   const history = useHistory();
+  var [token, setToken] = useState(localStorage.getItem('token'))
   return (
     <>
       <InteractiveMenu/>
@@ -30,9 +32,7 @@ function ProfileScreen(props){
         }}/>
 
         <ProfileButton/>
-      </div>
-
-      
+      </div>   
 
       <Route exact path = {`/profile/edit_profile`}>
         <EditProfile/>

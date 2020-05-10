@@ -1,8 +1,10 @@
 import React, { useState, Component} from 'react';
 import './index.css';
 import Dropdown from 'react-bootstrap/Dropdown'
+import axios from 'axios'
 
 class DualNBack extends Component {
+
   constructor(props) {
     super(props);
     this.rounds = 20;
@@ -14,6 +16,15 @@ class DualNBack extends Component {
     this.state = {
       start : true
     };
+    this.token = localStorage.getItem('token')
+    this.userConfig = {
+      headers: {
+        'Content-type': 'application/json'
+      }
+    }
+    if(this.token) {
+      this.userConfig.headers['token'] = this.token;
+    }
   }
   setN(n) {
     this.n = n;
@@ -40,10 +51,15 @@ class DualNBack extends Component {
         setTimeout(() => this.game(), 1000);}, 1000);
     }
     else{
+      this.userConfig.nback = {"correct" : this.score[0], "incorrect" : this.score[1]}
+      axios.post('/api/users/nback', {"nback" : this.userConfig.nback}, {headers : this.userConfig.headers})
+        .then((res) => console.log("done"))
+        .catch((res) => console.log("not done!"))
       this.order[0] = [];
       this.rounds = 20;
       this.overStart = false;
       this.setState({start : true});
+
     }
   }
 
@@ -73,7 +89,7 @@ class DualNBack extends Component {
           <div className = "info-text-explaination">N-back is a minigame where the goal is to keep track of the N latest elements. </div>
           <div className = "info-text">1) Choose your N from the dropdown above the game field</div>
           <div className = "info-text">2) Click start on the game field</div>
-          <div className = "info-text">3) Whenever the position of the yellow marker is the same as it was N times ago, click the position button below the game field.</div>
+          <div className = "info-text">3) Whenever the position of the blue marker is the same as it was N times ago, click the position button below the game field.</div>
 
         </div>
 

@@ -50,8 +50,8 @@ router.post('/edit', authentication, (req, res) => {
   if(req.body.email != ""){
     updateUserObject.email = req.body.email
   }
-  User.findOneAndUpdate(req.body.id, updateUserObject)
-    .then(user => {console.log(user); res.status(200).json({msg : "Data successfully changed"})})
+  User.findByIdAndUpdate(req.body.id, updateUserObject)
+    .then(user => {res.status(200).json({msg : "Data successfully changed"})})
     .catch(err => res.status(404).json({msg : "An unknown error accured"}))
 })
 

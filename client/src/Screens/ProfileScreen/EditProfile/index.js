@@ -11,6 +11,7 @@ const styles = {
     top : "57vh",
     width : "10vw",
     height : "4vh",
+    fontSize : "1.25vh",
     left : "15vw"
   }
 }
@@ -22,18 +23,17 @@ function EditProfile(props){
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const emailRef = useRef(null);
+  var [token, setToken] = useState(localStorage.getItem('token'))
   var [name, setName] = useState(null);
   var [email, setEmail] = useState(null);
   var [render, setRender] = useState(false);
-
-  let token1 = localStorage.getItem('token');
   const userConfig = {
     headers: {
       'Content-type': 'application/json'
     }
   }
-  if(token1) {
-    userConfig.headers['token'] = token1;
+  if(token) {
+    userConfig.headers['token'] = token;
   }
   axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers})
     .then((res) => {
@@ -54,7 +54,6 @@ function EditProfile(props){
         <p id = "email-text" className = "edit-profile-text">Choose a new email below</p>
         <TextField inputRef = {emailRef} className = "change-settings-email" label = "New Email" variant = "outlined"/>
         <Button variant = "contained" className = {classes.editButton} onClick={() => {
-          let token = localStorage.getItem('token');
           const config = {
             headers: {
               'Content-type': 'application/json'

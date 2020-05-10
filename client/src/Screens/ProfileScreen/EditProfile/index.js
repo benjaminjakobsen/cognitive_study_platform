@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import './index.css';
 import axios from 'axios';
 import {Button, Fab, List, ListItem, ListItemIcon,ListItemText, Modal, TextField, Divider} from "@material-ui/core";
@@ -17,17 +17,31 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-
 function EditProfile(props){
   const classes = useStyles();
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const emailRef = useRef(null);
+  var [name, setName] = useState(null); 
+  var [email, setEmail] = useState(null);
+  var [render, setRender] = useState(false);
+
+  let token1 = localStorage.getItem('token');
+  const userConfig = {
+    headers: {
+      'Content-type': 'application/json'
+    }
+  }
+  if(token1) {
+    userConfig.headers['token'] = token1;
+  }
+  axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers}).then((res) => {setName(res.data.username); setEmail(res.data.email)})
+
   return (
     <>
-      <div className = "edit-profile-header">
-        <p>Edit your account settings</p>
-      </div>
+      {render ? [<div className = "edit-profile-header">
+        <p>Edit your account details</p>
+      </div>, 
       <div className = "edit-profile-container">
         <p id = "username-text" className = "edit-profile-text">Choose a new username below</p>
         <TextField inputRef = {usernameRef} className = "change-settings-username" label = "New Username" variant = "outlined"/>
@@ -36,7 +50,6 @@ function EditProfile(props){
         <p id = "email-text" className = "edit-profile-text">Choose a new email below</p>
         <TextField inputRef = {emailRef} className = "change-settings-email" label = "New Email" variant = "outlined"/>
         <Button variant = "contained" className = {classes.editButton} onClick={() => {
-          console.log(usernameRef.current.value);
           let token = localStorage.getItem('token');
           const config = {
             headers: {
@@ -52,8 +65,21 @@ function EditProfile(props){
             config.headers['token'] = token;
           }
           axios.post('/api/users/edit', config.body, {headers: config.headers})
+          setRender(false);
         }}>Update Settings</Button>
-      </div>
+      </div>]:[
+        <div className = "edit-profile-header"> 
+          <p>Current account details</p>
+        </div>,
+        <div className = "edit-profile-container">
+          <p id = "username-text" className = "edit-profile-text">Current username:</p>
+          <p className = "change-settings-username">{name}</p>
+          <p id = "password-text" className = "edit-profile-text">Current email:</p>
+          <p className = "edit-profile-email">{email}</p>
+          <Button variant = "contained" className = {classes.editButton} onClick = {() => {setRender(true)}}>Change your details</Button>
+        </div>
+      ]}
+      
     </>
   );
 }

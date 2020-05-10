@@ -50,10 +50,15 @@ router.post('/edit', authentication, (req, res) => {
   if(req.body.email != ""){
     updateUserObject.email = req.body.email
   }
-  console.log(updateUserObject);
   User.findOneAndUpdate(req.body.id, updateUserObject) 
     .then(user => res.status(200).json({msg : "Data successfully changed"}))
     .catch(err => res.status(404).json({msg : "An unknown error accured"}))
+})
+
+router.post('/info', authentication, (req, res) => {
+  User.findById(req.body.id)
+    .then(user =>  res.json(user))
+    .catch(err => res.status(404).json({msg: "user not found"}))
 })
 
 

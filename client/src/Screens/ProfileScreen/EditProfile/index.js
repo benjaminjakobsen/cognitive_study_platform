@@ -12,7 +12,8 @@ const styles = {
     width : "10vw",
     height : "4vh",
     fontSize : "1.25vh",
-    left : "15vw"
+    left : "15vw",
+
   }
 }
 

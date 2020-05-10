@@ -3,9 +3,12 @@
   left : 35vw;
   top : 20vh;
   width : 30vw;
-  height : 70vh;
+  height : 40vh;
   border-radius: 10px;
-  border : 1px solid red;
+  border : 1px solid black;
+  -webkit-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
 }
 .create-palace-header {
   position: absolute;
@@ -16,4 +19,15 @@
   font-weight: 100;
   width : 30vw;
   height : 60vh;
+}
+.itemListContainer {
+  position: absolute;
+  width : 12.5vw;
+  top : 12.5vh;
+  height : 87.5vh
+}
+.itemList {
+  list-style-type: none;
+  margin : 0;
+  padding : 0;
 }

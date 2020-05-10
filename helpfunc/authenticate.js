@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 
 function authenticate(req, res, next) {
   const token = req.header('token');
-  console.log(token);
   if(token) {
     try {
       const decrypted = jwt.verify(token, keys.jwtSecret);

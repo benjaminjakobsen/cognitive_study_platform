@@ -22,7 +22,7 @@ function EditProfile(props){
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const emailRef = useRef(null);
-  var [name, setName] = useState(null); 
+  var [name, setName] = useState(null);
   var [email, setEmail] = useState(null);
   var [render, setRender] = useState(false);
 
@@ -35,13 +35,17 @@ function EditProfile(props){
   if(token1) {
     userConfig.headers['token'] = token1;
   }
-  axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers}).then((res) => {setName(res.data.username); setEmail(res.data.email)})
+  axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers})
+    .then((res) => {
+      setName(res.data.username);
+      setEmail(res.data.email)
+    })
 
   return (
     <>
       {render ? [<div className = "edit-profile-header">
         <p>Edit your account details</p>
-      </div>, 
+      </div>,
       <div className = "edit-profile-container">
         <p id = "username-text" className = "edit-profile-text">Choose a new username below</p>
         <TextField inputRef = {usernameRef} className = "change-settings-username" label = "New Username" variant = "outlined"/>
@@ -65,10 +69,10 @@ function EditProfile(props){
             config.headers['token'] = token;
           }
           axios.post('/api/users/edit', config.body, {headers: config.headers})
-          setRender(false);
+          .then(res => {setRender(false);})
         }}>Update Settings</Button>
       </div>]:[
-        <div className = "edit-profile-header"> 
+        <div className = "edit-profile-header">
           <p>Current account details</p>
         </div>,
         <div className = "edit-profile-container">
@@ -79,7 +83,7 @@ function EditProfile(props){
           <Button variant = "contained" className = {classes.editButton} onClick = {() => {setRender(true)}}>Change your details</Button>
         </div>
       ]}
-      
+
     </>
   );
 }

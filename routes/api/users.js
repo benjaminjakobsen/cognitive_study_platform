@@ -43,27 +43,26 @@ router.post('/edit', authentication, (req, res) => {
   let updateUserObject = {}
   if(req.body.username != ""){
     updateUserObject.username = req.body.username;
-  } 
+  }
   if(req.body.password != ""){
     updateUserObject.password = req.body.password;
   }
   if(req.body.email != ""){
     updateUserObject.email = req.body.email
   }
-  User.findOneAndUpdate(req.body.id, updateUserObject) 
-    .then(user => res.status(200).json({msg : "Data successfully changed"}))
+  User.findOneAndUpdate(req.body.id, updateUserObject)
+    .then(user => {console.log(user); res.status(200).json({msg : "Data successfully changed"})})
     .catch(err => res.status(404).json({msg : "An unknown error accured"}))
 })
 
 router.post('/info', authentication, (req, res) => {
   User.findById(req.body.id)
-    .then(user =>  res.json(user))
+    .then(user => {res.json(user)})
     .catch(err => res.status(404).json({msg: "user not found"}))
 })
 
 
 router.delete('/delete', authentication, (req, res) => { //Delete request
-  console.log(req.body.id);
   User.findById(req.body.id) //Finds schema with the id given
     .then(user => user.remove().then(() => res.json({user : "user deleted"}))) //removes user from database
     .catch(err => res.status(404).json({user : "user not found"})) //If it can't find user with the given id

@@ -1,12 +1,15 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import './index.css';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 import {Button, TextField} from "@material-ui/core";
 
+
 function Statistics(props){
   const history = useHistory();
+  var [state, setState] = useState(0);
   var [gameList, updateGameList] = useState([{incorrect : "N/A", correct : "N/A"}, {incorrect : "N/A", correct : "N/A"}, {incorrect : "N/A", correct : "N/A"}, {incorrect : "N/A", correct : "N/A"}]);
+  
   var token = localStorage.getItem('token')
   const userConfig = {
     headers: {
@@ -16,21 +19,18 @@ function Statistics(props){
   if(token) {
     userConfig.headers['token'] = token;
   }
-  useEffect(() => {
-    axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers})
-        .then((res) => {
-          let newGameList = gameList;
-          let index = 0;
-          while(index < 4 && index < res.data.nback.length){
-            newGameList[index] = res.data.nback[res.data.nback.length-index-1];
-            index++;
-          }
-          updateGameList(newGameList);
-        })
-  } ,[]);
 
-
-
+  axios.post('/api/users/info', userConfig.body, {headers : userConfig.headers})
+  .then((res) => {
+    let newGameList = gameList;
+    let index = 0;
+    while(index < 4 && index < res.data.nback.length){
+      newGameList[index] = res.data.nback[res.data.nback.length-index-1];
+      index++;
+    }
+    updateGameList(newGameList);
+    setState(1);
+  })
   return (
     <>
       <div className = "statistics-container">
@@ -55,11 +55,10 @@ function Statistics(props){
           <p className = "statistics-game-incorrect">Incorrect: {gameList[3]['incorrect']}</p>
           <p className = "statistics-game-correct">Correct: {gameList[3]['correct']}</p>
         </div>
-
         <Button className = "go-to-nback-button" variant = "contained" onClick={() => {
           history.push('/interactive/memory/dual_n_back')
         }}>Play more N-back</Button>
-
+        
       </div>
     </>
   );
